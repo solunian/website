@@ -1,11 +1,15 @@
-<h1 class="text-3xl">daniel cui</h1>
+<div>
+  <h1 class="text-7xl font-cursive">solunian</h1>
+  <p>hello there!</p>
+</div>
 
-<p>hi there! this is my website...</p>
+<div>
+  <h2 class="text-3xl font-cursive">projects</h2>
+  <p>...</p>
+</div>
 
-<h2 class="text-xl">projects</h2>
+<div>
+  <h2 class="text-3xl font-cursive">art</h2>
+  <p>...</p>
+</div>
 
-<p>...</p>
-
-<h2 class="text-xl">art</h2>
-
-<p>...</p>
