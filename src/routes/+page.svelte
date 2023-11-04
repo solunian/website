@@ -16,7 +16,7 @@
   <p>
     I enjoy creating <Link href="#projects">[cool things]</Link> with code, making
     <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link> random things,
-    and writing <Link href="#stories">[stories]</Link>. Creative expression is exhilarating!
+    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below! 
   </p>
 
   <p>
