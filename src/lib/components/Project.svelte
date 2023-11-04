@@ -7,8 +7,10 @@
 
 <div>
   <h3 class="inline">
-    <Link href={link}>{title}</Link>
-    ·
+    <Link href={link}>
+      <span class="font-semibold">{title}</span>
+    </Link> ·
   </h3>
+
   <slot />
 </div>
