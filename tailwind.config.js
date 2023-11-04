@@ -4,6 +4,8 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Lexend", "sans-serif"],
+      lexend: ["Lexend", "sans-serif"],
+      mono: ["Nova Mono", "monospace"],
     },
     extend: {},
   },
