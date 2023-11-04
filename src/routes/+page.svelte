@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>solunian</title>
+  <title>solunian.dev</title>
 </svelte:head>
 
 <header class="mt-8 flex max-w-2xl flex-col gap-5">
@@ -20,9 +20,11 @@
     <Link href="#stories">stories</Link>.
   </p>
 
-  <p>
-    Right now, I'm applying to college... (<span class="text-amber-800">Brown</span>, i luv u :D)
-  </p>
+  <p>Right now, I'm applying to college.</p>
+  
+  <div>
+    
+  </div>
 </header>
 
 <Section id="projects">
