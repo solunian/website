@@ -26,14 +26,14 @@
 
 <div class="grid grid-cols-2 gap-3 md:grid-cols-3">
   {#each sketches.slice(0, NUM_SHOWN) as sketch}
-    <div class="flex h-full w-full flex-col justify-center rounded-lg bg-stone-300">
+    <div class="flex w-full flex-col justify-center rounded-lg bg-stone-300">
       <img src={`/sketches/${sketch}`} alt={sketch.split(".")[0]} class="w-full rounded-lg" />
     </div>
   {/each}
 
   {#if gallery_opened}
     {#each sketches.slice(NUM_SHOWN) as sketch}
-      <div class="flex h-full w-full flex-col justify-center rounded-lg bg-stone-300">
+      <div class="flex w-full flex-col justify-center rounded-lg bg-stone-300">
         <img src={`/sketches/${sketch}`} alt={sketch.split(".")[0]} class="w-full rounded-lg" />
       </div>
     {/each}
