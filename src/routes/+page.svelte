@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>solunian</title>
+  <title>Daniel Cui</title>
 </svelte:head>
 
 <header class="mt-8 flex max-w-2xl flex-col gap-4">
@@ -16,8 +16,8 @@
 
   <p>
     I enjoy creating <Link href="#projects">[cool things]</Link> with code, making
-    <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link> random things,
-    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
+    <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link>, and
+    writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
   </p>
 
   <p>
@@ -51,13 +51,19 @@
   </Project>
 
   <Project title="Calc BC Final Presentation" link="https://saper-two.vercel.app/">
-    A visual math lesson on the surface area from a rotated graph. Used <Link
-      href="https://github.com/3b1b/manim">manim</Link> for cool animations!
+    A visual math lesson on the surface area from a rotated graph. Used
+    <Link href="https://github.com/3b1b/manim">manim</Link> for cool animations!
+  </Project>
+
+  <Project title="dripdrop" link="https://dripdrop-two.vercel.app/">
+    "The next-gen water source." A website to test basic
+    <Link href="https://www.react-spring.dev/">react-spring</Link>
+    animations and dark mode with <Link href="https://tailwindcss.com/">tailwindcss</Link>.
   </Project>
 
   <Project title="Muting Ads on Spotify" link="https://github.com/solunian/mute-ads">
-    A tool to mute ads on Spotify through the computer's volume using the API and some simple python
-    audio manipulation.
+    A tool to mute ads on Spotify through the computer's volume using the API and some simple audio
+    manipulation with Python.
   </Project>
 </Section>
 
