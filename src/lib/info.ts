@@ -12,7 +12,14 @@
 //   }
 // }
 
-// sorted by date, most recent at the top
+export const pixel_art: string[] = [
+  "rick_astley.png",
+  "shine_pfp.png",
+  "worst_intersection.png",
+  "creekside.png",
+  "wonyoung.png",
+];
+
 export const sketches: string[] = [
   "daniels_hand.jpeg",
   "shreyan.jpeg",

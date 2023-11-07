@@ -1,5 +1,6 @@
 <script>
   import Link from "$lib/components/Link.svelte";
+  import PixelArtGallery from "$lib/components/PixelArtGallery.svelte";
   import Project from "$lib/components/Project.svelte";
   import Section from "$lib/components/Section.svelte";
   import SketchesGallery from "$lib/components/SketchesGallery.svelte";
@@ -68,7 +69,7 @@
 </Section>
 
 <Section id="pixel-art" name="pixel art">
-  <p>To be added!</p>
+  <PixelArtGallery />
 </Section>
 
 <Section id="sketches">
