@@ -2,6 +2,7 @@
   import Link from "$lib/components/Link.svelte";
   import Project from "$lib/components/Project.svelte";
   import Section from "$lib/components/Section.svelte";
+  import SketchesGallery from "$lib/components/SketchesGallery.svelte";
 </script>
 
 <svelte:head>
@@ -16,7 +17,7 @@
   <p>
     I enjoy creating <Link href="#projects">[cool things]</Link> with code, making
     <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link> random things,
-    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below! 
+    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
   </p>
 
   <p>
@@ -65,7 +66,7 @@
 </Section>
 
 <Section id="sketches">
-  <p>To be added!</p>
+  <SketchesGallery />
 </Section>
 
 <Section id="stories">
