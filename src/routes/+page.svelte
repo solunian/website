@@ -16,9 +16,9 @@
   <p>Hi there! I'm a high school senior in the Bay Area.</p>
 
   <p>
-    I enjoy creating <Link href="#projects">[cool things]</Link> with code, making
-    <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link>, and
-    writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
+    I enjoy creating <Link href="#projects">[cool things]</Link> with code, 
+    <Link href="#sketches">[sketching]</Link>, making <Link href="#pixel-art">[pixel art]</Link>,
+    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
   </p>
 
   <p>
@@ -68,12 +68,12 @@
   </Project>
 </Section>
 
-<Section id="pixel-art" name="pixel art">
-  <PixelArtGallery />
-</Section>
-
 <Section id="sketches">
   <SketchesGallery />
+</Section>
+
+<Section id="pixel-art" name="pixel art">
+  <PixelArtGallery />
 </Section>
 
 <Section id="stories">

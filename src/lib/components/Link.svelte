@@ -7,6 +7,6 @@
 <a
   {href}
   {target}
-  class={`rounded text-black underline decoration-gray-400 transition hover:bg-gray-200`}>
+  class={`rounded text-black underline decoration-gray-400 transition hover:bg-gray-200 whitespace-nowrap`}>
   <slot />
 </a>
