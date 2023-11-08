@@ -38,6 +38,10 @@
 </div>
 
 <style>
+  #tooltip-target {
+    @apply relative;
+  }
+
   #tooltip::after {
     content: "";
     transform: translate(-50%, 170%);
@@ -45,8 +49,8 @@
   }
 
   #tooltip {
-    transform: translate(-59%, -120%);
-    @apply invisible absolute z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white;
+    /* transform: translate(-59%, -120%); */
+    @apply invisible absolute -left-12 -top-[34px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white;
   }
 
   #tooltip-target:hover > #tooltip {
