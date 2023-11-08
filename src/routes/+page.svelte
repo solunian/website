@@ -16,9 +16,9 @@
   <p>Hi there! I'm a high school senior in the Bay Area.</p>
 
   <p>
-    I enjoy creating <Link href="#projects">[cool things]</Link> with code,
-    <Link href="#sketches">[sketching]</Link>, making <Link href="#pixel-art">[pixel art]</Link>,
-    and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
+    I enjoy creating <Link href="#projects">[cool things]</Link> with code, making
+    <Link href="#pixel-art">[pixel art]</Link>, <Link href="#sketches">[sketching]</Link>, and
+    writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
   </p>
 
   <p>
@@ -42,12 +42,12 @@
     >!
   </Project>
 
-  <Project title="Tinovation Website" link="https://tinovation.org/">
+  <Project title="Tinovation Website" link="https://tinovation.org/" starred>
     The amazing website for the revolutionized Tinovation club! Includes general club information,
     programming resources, a showcase for members' projects, and a cool leaderboard.
   </Project>
 
-  <Project title="CHS Map" link="https://chs-map.vercel.app/">
+  <Project title="CHS Map" link="https://chs-map.vercel.app/" starred>
     An interactive map for Cupertino High School to help students navigate around campus.
   </Project>
 
@@ -56,13 +56,32 @@
     <Link href="https://github.com/3b1b/manim">manim</Link> for cool animations!
   </Project>
 
+  <Project title="LifeLink" link="https://lifelink-eta.vercel.app/">
+    Digital medical IDs for emergencies. 3rd place at Corpus Hacks 2023!
+  </Project>
+
+  <Project title="Neighborhood Watch" link="https://hack-cupertino.vercel.app/">
+    Live tracker/reporter for crime or suspicious activity through map pinpoints, images, and
+    descriptions. For Hack Cupertino 2023.
+  </Project>
+
+  <Project title="MedTalk" link="https://medtalk.vercel.app/">
+    Healthcare chatbot for quick and easy medical advice; plus, a searchable catalog of common
+    medications. For Los Altos Hacks VII.
+  </Project>
+
+  <Project title="College Tree" link="https://college-tree.vercel.app/">
+    Website for matching activities to high school students who are trying to get into college. For
+    CUHSD Hackathon IV.
+  </Project>
+
   <Project title="dripdrop" link="https://dripdrop-two.vercel.app/">
     "The next-gen water source." A website to test basic
     <Link href="https://www.react-spring.dev/">react-spring</Link>
     animations and dark mode with <Link href="https://tailwindcss.com/">tailwindcss</Link>.
   </Project>
 
-  <Project title="Muting Ads on Spotify" link="https://github.com/solunian/mute-ads">
+  <Project title="Mute Ads on Spotify" link="https://github.com/solunian/mute-ads">
     A tool to mute ads on Spotify through the computer's volume using the API and some simple audio
     manipulation with Python.
   </Project>
