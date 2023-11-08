@@ -1,9 +1,8 @@
 <script>
   import Link from "$lib/components/Link.svelte";
-  import PixelArtGallery from "$lib/components/PixelArtGallery.svelte";
   import Project from "$lib/components/Project.svelte";
   import Section from "$lib/components/Section.svelte";
-  import SketchesGallery from "$lib/components/SketchesGallery.svelte";
+  import Gallery from "$lib/components/Gallery.svelte";
 </script>
 
 <svelte:head>
@@ -88,11 +87,45 @@
 </Section>
 
 <Section id="sketches">
-  <SketchesGallery />
+  <Gallery
+    folder="sketches"
+    grayscale
+    filenames={[
+      "daniels_hand.jpg",
+      "shreyan.jpg",
+      "sanias_bottle.jpg",
+      "apple.jpg",
+      "rose.jpg",
+      "tiffany.jpg",
+      "book_talk_big_three.jpg",
+      "arnav.jpg",
+      "alicia.jpg",
+      "avy.jpg",
+      "elaine.jpg",
+      "ajay.jpg",
+      "kitten.jpg",
+      "little_bird.jpg",
+      "owl.jpg",
+      "phoenix.jpg",
+      "christmas_hat_bird.jpg",
+      "porg.jpg",
+      "panda.jpg",
+      "tiger.jpg",
+      "wolf.jpg",
+      "seagull.jpg",
+    ]} />
 </Section>
 
 <Section id="pixel-art" name="pixel art">
-  <PixelArtGallery />
+  <Gallery
+    folder="pixel-art"
+    filenames={[
+      "rick_astley.png",
+      "shine_pfp.png",
+      "worst_intersection.png",
+      "creekside.png",
+      "wonyoung.png",
+    ]} />
 </Section>
 
 <Section id="stories">
