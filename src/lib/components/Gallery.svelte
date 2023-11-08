@@ -21,7 +21,7 @@
   const toggle_gallery = () => {
     gallery_opened = !gallery_opened;
     if (gallery_opened) {
-      button_text = "show less...";
+      button_text = "show fewer...";
     } else {
       button_text = "show more!";
     }
