@@ -74,7 +74,7 @@
     CUHSD Hackathon IV.
   </Project>
 
-  <Project title="dripdrop" link="https://dripdrop-two.vercel.app/">
+  <Project title="Dripdrop" link="https://dripdrop-two.vercel.app/">
     "The next-gen water source." A website to test basic
     <Link href="https://www.react-spring.dev/">react-spring</Link>
     animations and dark mode with <Link href="https://tailwindcss.com/">tailwindcss</Link>.
