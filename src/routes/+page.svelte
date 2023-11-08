@@ -119,13 +119,7 @@
 <Section id="pixel-art" name="pixel art">
   <Gallery
     folder="pixel-art"
-    filenames={[
-      "rick_astley.png",
-      "shine_pfp.png",
-      "worst_intersection.png",
-      "creekside.png",
-      "wonyoung.png",
-    ]} />
+    filenames={["rick_astley.png", "shine_pfp.png", "worst_intersection.png", "creekside.png"]} />
 </Section>
 
 <Section id="stories">
