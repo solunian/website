@@ -17,14 +17,14 @@
 
 <div class="grid grid-cols-2 gap-3 md:grid-cols-3">
   {#each pixel_art.slice(0, NUM_SHOWN) as piece}
-    <div class="flex w-full flex-col justify-center rounded-lg bg-stone-300">
+    <div class="flex w-full flex-col justify-center rounded-lg bg-gray-300">
       <img src={`/pixel-art/${piece}`} alt={piece.split(".")[0]} class="w-full rounded-lg" />
     </div>
   {/each}
 
   {#if gallery_opened}
     {#each pixel_art.slice(NUM_SHOWN) as sketch}
-      <div class="flex w-full flex-col justify-center rounded-lg bg-stone-300">
+      <div class="flex w-full flex-col justify-center rounded-lg bg-gray-300">
         <img src={`/pixel-art/${sketch}`} alt={sketch.split(".")[0]} class="w-full rounded-lg" />
       </div>
     {/each}
