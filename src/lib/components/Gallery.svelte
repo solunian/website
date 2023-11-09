@@ -76,7 +76,7 @@
   {#each filenames.slice(0, NUM_SHOWN) as piece, idx}
     <button
       on:click={() => open_modal(idx)}
-      class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 ${
+      class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl ${
         grayscale ? "grayscale" : ""
       }`}>
       <img
@@ -90,7 +90,7 @@
     {#each filenames.slice(NUM_SHOWN) as piece, idx}
       <button
         on:click={() => open_modal(NUM_SHOWN + idx)}
-        class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 ${
+        class={`flex w-full flex-col justify-center rounded-lg bg-gray-300  shadow transition duration-200 hover:shadow-xl ${
           grayscale ? "grayscale" : ""
         }`}>
         <img
