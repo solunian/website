@@ -10,7 +10,12 @@
 </svelte:head>
 
 <header class="mt-8 flex max-w-2xl flex-col gap-4">
-  <h1 class="mb-4 font-lexend text-4xl font-bold text-black">Daniel Cui</h1>
+  <div class="mb-4 flex flex-row items-center gap-6">
+    <h1 class="font-lexend text-4xl font-bold text-black">Daniel Cui</h1>
+    <a href="/">
+      <img src="/website/icon.png" alt="icon" class="h-12" />
+    </a>
+  </div>
 
   <p>Hi there! I'm a high school senior in the Bay Area.</p>
 
@@ -123,5 +128,8 @@
 </Section>
 
 <Section id="stories">
-  <p>To be added!</p>
+  <p>
+    Note: I had written several stories a while ago, but looking back now, they are definitely not
+    my best work. So, back to the drawing board I go!
+  </p>
 </Section>
