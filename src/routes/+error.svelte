@@ -7,7 +7,7 @@
   <title>{$page.status}: {$page.error?.message}</title>
 </svelte:head>
 
-<div class="mx-4 flex flex-col items-center justify-center gap-4 text-center md:mx-10 pt-28">
+<div class="mx-4 flex flex-col items-center justify-center gap-4 pt-28 text-center md:mx-10">
   <h1 class="font-mono text-3xl text-black md:text-4xl">
     {$page.status}: {$page.error?.message}
   </h1>
