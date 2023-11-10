@@ -1,7 +1,7 @@
 <script lang="ts">
   export let href: string;
 
-  const target: string = href.startsWith("#") ? "_self" : "_blank";
+  const target: string = href.startsWith("#") || href === "/" ? "_self" : "_blank";
 </script>
 
 <a
