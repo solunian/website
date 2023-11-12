@@ -145,3 +145,7 @@
     </Section>
   </div>
 </div>
+
+<footer class="bg-gray-50 py-2 flex flex-row justify-center text-gray-300 font-mono">
+  destiny.
+</footer>
