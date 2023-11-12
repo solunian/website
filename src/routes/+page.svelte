@@ -100,6 +100,7 @@
         folder="sketches"
         grayscale
         filenames={[
+          "orchids.jpg",
           "daniels_hand.jpg",
           "shreyan.jpg",
           "sanias_bottle.jpg",
