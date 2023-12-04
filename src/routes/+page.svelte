@@ -14,7 +14,7 @@
     class="flex max-w-5xl flex-col gap-4 px-6 pb-8 pt-4 sm:gap-8 sm:px-12 sm:pb-10 sm:pt-6 md:px-20 md:pb-12 md:pt-10">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
       <div class="mb-4 flex flex-row items-center gap-6">
-        <h1 class="font-lexend text-4xl font-bold text-black">Daniel Cui</h1>
+        <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
         <a href="/">
           <img src="/website/icon.png" alt="icon" class="h-12" />
         </a>
@@ -146,6 +146,7 @@
   </div>
 </div>
 
-<footer class="flex flex-row justify-center bg-gray-50 pb-4 pt-2 font-mono text-gray-300">
+<footer
+  class="flex flex-row justify-center bg-gray-50 pb-4 pt-2 font-mono text-gray-300 dark:bg-zinc-950 dark:text-zinc-700">
   destiny.
 </footer>

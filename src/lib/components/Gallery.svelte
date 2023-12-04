@@ -76,7 +76,7 @@
   {#each filenames.slice(0, NUM_SHOWN) as piece, idx}
     <button
       on:click={() => open_modal(idx)}
-      class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl ${
+      class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl dark:bg-zinc-300 ${
         grayscale ? "grayscale" : ""
       }`}>
       <img
@@ -90,7 +90,7 @@
     {#each filenames.slice(NUM_SHOWN) as piece, idx}
       <button
         on:click={() => open_modal(NUM_SHOWN + idx)}
-        class={`flex w-full flex-col justify-center rounded-lg bg-gray-300  shadow transition duration-200 hover:shadow-xl ${
+        class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl dark:bg-zinc-300 ${
           grayscale ? "grayscale" : ""
         }`}>
         <img
@@ -105,13 +105,13 @@
 {#if filenames.length > NUM_SHOWN}
   <div class="flex flex-row justify-center">
     <button
-      class="w-fit rounded border-2 border-gray-200 px-2 transition hover:scale-105 hover:bg-gray-200"
+      class="w-fit rounded border-2 border-gray-200 px-2 transition hover:scale-105 hover:bg-gray-200 dark:border-zinc-800 dark:hover:bg-zinc-800"
       on:click={toggle_gallery}>{button_text}</button>
   </div>
 {/if}
 
 <style>
   ::backdrop {
-    @apply bg-gray-900 opacity-75;
+    @apply bg-zinc-900 opacity-75;
   }
 </style>

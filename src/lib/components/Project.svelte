@@ -37,7 +37,7 @@
   <slot />
 </div>
 
-<style>
+<style lang="postcss">
   #tooltip-target {
     @apply relative;
   }
@@ -45,12 +45,12 @@
   #tooltip::after {
     content: "";
     transform: translate(-50%, 170%);
-    @apply absolute left-1/2 top-0 z-10 block w-0 border-8 border-transparent border-t-black;
+    @apply absolute left-1/2 top-0 z-10 block w-0 border-8 border-transparent border-t-black dark:border-t-yellow-400;
   }
 
   #tooltip {
     /* transform: translate(-59%, -120%); */
-    @apply invisible absolute -left-12 -top-[34px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white;
+    @apply invisible absolute -left-12 -top-[34px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white dark:bg-yellow-400 dark:text-black;
   }
 
   #tooltip-target:hover > #tooltip {

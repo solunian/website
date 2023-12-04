@@ -9,5 +9,5 @@ html {
 }
 
 body {
-  @apply text-xl text-gray-500;
+  @apply text-xl text-gray-500 dark:bg-zinc-900 dark:text-zinc-300;
 }
