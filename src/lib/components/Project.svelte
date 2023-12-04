@@ -50,7 +50,7 @@
 
   #tooltip {
     /* transform: translate(-59%, -120%); */
-    @apply invisible absolute -left-12 -top-[34px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white dark:bg-yellow-400 dark:text-black;
+    @apply invisible absolute -left-12 -top-[36px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white dark:bg-yellow-400 dark:text-black;
   }
 
   #tooltip-target:hover > #tooltip {

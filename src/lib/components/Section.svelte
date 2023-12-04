@@ -31,7 +31,7 @@
     {#if see_more !== null && see_more_href !== null}
       <span class="mr-6">
         <Link href={see_more_href}>
-          <span class="relative ml-0.5 text-lg text-purple-600">
+          <span class="relative ml-0.5 text-lg text-purple-700 dark:text-purple-500">
             {see_more}&nbsp;&nbsp;&nbsp;&nbsp;
             <svg
               xmlns="http://www.w3.org/2000/svg"
