@@ -149,5 +149,5 @@
 
 <footer
   class="flex flex-row justify-center bg-gray-50 pb-4 pt-2 font-mono text-gray-300 dark:bg-zinc-950 dark:text-zinc-700">
-  destiny.
+  love is dead.
 </footer>

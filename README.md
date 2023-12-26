@@ -1,5 +1,3 @@
-destiny.
-
 ## Dev Notes
 
 - webkit sometimes renders css differently... check Safari or iPhone
