@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
 
   const NUM_SHOWN: number = 6;
 
@@ -47,11 +48,15 @@
 
 <dialog class="bg-transparent" bind:this={modal}>
   {#if modal_open_idx !== -1}
-    <button class="fixed left-0 top-0 -z-10 h-full w-full cursor-default" on:click={close_modal} />
+    <button
+      class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
+      on:click={close_modal}
+      transition:fade={{ duration: 200 }} />
 
     <button
       class="absolute right-1 top-1 z-10 stroke-gray-900 opacity-50 transition hover:opacity-75"
-      on:click={close_modal}>
+      on:click={close_modal}
+      transition:fade={{ duration: 200 }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -64,6 +69,7 @@
     </button>
 
     <img
+      transition:fade={{ duration: 200 }}
       src={`/${folder}/${filenames[modal_open_idx]}`}
       alt={filenames[modal_open_idx].split(".")[0].replaceAll("_", " ")}
       class={`max-h-[75vh] max-w-[75vw] rounded-xl md:max-w-[50vw] ${

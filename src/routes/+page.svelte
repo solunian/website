@@ -29,9 +29,11 @@
       </p>
 
       <p>
-        Right now, I'm working on
+        Right now, I'm working on <Link href="https://github.com/solunian/paperplane"
+          ><b>paperplane</b></Link
+        >, a text editor/format for enjoyable writing,
         <Link href="https://github.com/solunian/two-colors"><b>two-colors</b></Link>, a game to
-        treat amblyopia (lazy eye), and
+        treat amblyopia, and
         <Link href="https://github.com/solunian/tart"><b>tart</b></Link>, a simple project
         management tool.
       </p>
@@ -43,6 +45,16 @@
     </header>
 
     <Section id="projects" see_more="GitHub" see_more_href="https://github.com/solunian">
+      <Project title="Personal Website" link="/">
+        Huh. I guess you're already here... well, that's something, isn't it? Anyway, have a nice
+        day! Stay determined!
+      </Project>
+
+      <Project title="Unimash" link="https://unimash.vercel.app/">
+        A joke website replicating FaceMash for "uni"-versities. Just some fun with MongoDB,
+        SvelteKit's form actions, and chess rating systems.
+      </Project>
+
       <Project title="Jazzboard" link="https://jazzboard.vercel.app/">
         A way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
           href="https://outernet.hackclub.com">Outernet</Link
@@ -60,7 +72,7 @@
       </Project>
 
       <Project title="Calc BC Final Presentation" link="https://saper-two.vercel.app/">
-        A visual math lesson on the surface area from a rotated graph. Used
+        A visual math lesson on the surface area from a rotated curve. Used
         <Link href="https://github.com/3b1b/manim">manim</Link> for cool animations!
       </Project>
 
