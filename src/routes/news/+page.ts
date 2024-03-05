@@ -1,11 +1,7 @@
-import type { PageLoad } from './$types';
-import { json } from '@sveltejs/kit';
+import type { PageLoad } from "./$types";
 
-/*
-https://hacker-news.firebaseio.com/v0/topstories.json
-https://hacker-news.firebaseio.com/v0/newstories.json
-https://hacker-news.firebaseio.com/v0/beststories.json
-*/
+// loading only on client, not on server?
+// export const ssr = false;
 
 const get_filter_url = (query_param: string): string => {
   if (query_param === "top") {
@@ -18,7 +14,32 @@ const get_filter_url = (query_param: string): string => {
     // top is default
     return "https://hacker-news.firebaseio.com/v0/topstories.json";
   }
-}
+};
+
+export const load: PageLoad = async ({ url }) => {
+  const fetch_url = get_filter_url(url.searchParams.get("filter") ?? "");
+  return {
+    fetch_url,
+  };
+};
+
+/*
+https://hacker-news.firebaseio.com/v0/topstories.json
+https://hacker-news.firebaseio.com/v0/newstories.json
+https://hacker-news.firebaseio.com/v0/beststories.json
+
+const get_filter_url = (query_param: string): string => {
+  if (query_param === "top") {
+    return "https://hacker-news.firebaseio.com/v0/topstories.json";
+  } else if (query_param === "new") {
+    return "https://hacker-news.firebaseio.com/v0/newstories.json";
+  } else if (query_param === "best") {
+    return "https://hacker-news.firebaseio.com/v0/beststories.json";
+  } else {
+    // top is default
+    return "https://hacker-news.firebaseio.com/v0/topstories.json";
+  }
+};
 
 type ItemType = "job" | "story" | "comment" | "poll" | "pollopt";
 type ItemID = number;
@@ -42,15 +63,26 @@ interface Item {
 }
 
 export const load: PageLoad = async ({ fetch, url }) => {
-  const fetch_url = get_filter_url(url.searchParams.get("filter") ?? "");
-  const item_id_list: ItemID[] = await (await fetch(fetch_url)).json();
-  
-  
-  const item_promises = item_id_list.map((id) => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`));
-  const item_responses = await Promise.all(item_promises);
-  const item_list: Item[] = await Promise.all(item_responses.map(async (res) => await res.json()));
-  
-	return {
-    item_list
-	};
+  let ok = true;
+  let item_list: Promise<Item[]> | undefined;
+
+  try {
+    const fetch_url = get_filter_url(url.searchParams.get("filter") ?? "");
+    const item_id_list: ItemID[] = await (await fetch(fetch_url)).json();
+
+    const item_promises = item_id_list
+      .slice(0, 30)
+      .map((id) => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`));
+    const item_responses = await Promise.all(item_promises);
+    item_list = Promise.all(item_responses.map(async (res) => await res.json()));
+  } catch (err) {
+    ok = false;
+  }
+
+  return {
+    ok,
+    item_list,
+  };
 };
+
+*/
