@@ -54,7 +54,7 @@
       transition:fade={{ duration: 200 }} />
 
     <button
-      class="absolute right-1 top-1 z-10 stroke-gray-900 opacity-50 transition hover:opacity-75"
+      class="absolute right-1 top-1 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
       on:click={close_modal}
       transition:fade={{ duration: 200 }}>
       <svg
@@ -82,7 +82,7 @@
   {#each filenames.slice(0, NUM_SHOWN) as piece, idx}
     <button
       on:click={() => open_modal(idx)}
-      class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl dark:bg-zinc-300 ${
+      class={`flex w-full flex-col justify-center rounded-lg bg-zinc-300 shadow transition duration-200 hover:shadow-xl ${
         grayscale ? "grayscale" : ""
       }`}>
       <img
@@ -96,7 +96,7 @@
     {#each filenames.slice(NUM_SHOWN) as piece, idx}
       <button
         on:click={() => open_modal(NUM_SHOWN + idx)}
-        class={`flex w-full flex-col justify-center rounded-lg bg-gray-300 shadow transition duration-200 hover:shadow-xl dark:bg-zinc-300 ${
+        class={`flex w-full flex-col justify-center rounded-lg bg-zinc-300 shadow transition duration-200 hover:shadow-xl ${
           grayscale ? "grayscale" : ""
         }`}>
         <img
@@ -111,7 +111,7 @@
 {#if filenames.length > NUM_SHOWN}
   <div class="flex flex-row justify-center">
     <button
-      class="w-fit rounded border-2 border-gray-200 px-2 transition hover:scale-105 hover:bg-gray-200 dark:border-zinc-800 dark:hover:bg-zinc-800"
+      class="w-fit rounded border-2 border-zinc-200 px-2 transition hover:scale-105 hover:bg-zinc-200 dark:border-zinc-800 dark:hover:bg-zinc-800"
       on:click={toggle_gallery}>{button_text}</button>
   </div>
 {/if}
