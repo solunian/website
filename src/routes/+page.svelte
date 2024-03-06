@@ -35,7 +35,9 @@
         <Link href="https://github.com/solunian/two-colors"><b>two-colors</b></Link>, a game to
         treat amblyopia, and
         <Link href="https://github.com/solunian/tart"><b>tart</b></Link>, a simple project
-        management tool.
+        management tool. More on my <Link href="https://github.com/solunian"
+          ><span class="text-green-600">GitHub</span></Link
+        >!
       </p>
 
       <p>
@@ -44,7 +46,7 @@
       </p>
     </header>
 
-    <Section id="projects" see_more="GitHub" see_more_href="https://github.com/solunian">
+    <Section id="projects">
       <Project title="Personal Website" link="/">
         Huh. I guess you're already here... well, that's something, isn't it? Anyway, have a nice
         day! Stay determined!

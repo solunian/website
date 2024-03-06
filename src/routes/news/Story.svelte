@@ -1,38 +1,43 @@
 <script lang="ts">
+  import { slide } from "svelte/transition";
+  import Title from "./Title.svelte";
   import type { Item } from "./types";
 
   export let item: Item;
 
   const is_def = (val: any) => val !== undefined;
+
+  let is_text_open = false;
 </script>
 
-<div class="border-y p-1">
-  <h1 class="flex flex-row gap-2">
-    {#if is_def(item.title)}
-      {item.title}
-    {:else}
-      {"[untitled story]"}
-    {/if}
+<div class="p-1 text-left">
+  <div class="flex flex-row items-center gap-2">
+    <Title title={item.title} url={item.url} />
 
-    {#if is_def(item.url)}
-      <a href={item.url} target="_blank"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="inline h-6 w-6 -translate-y-0.5">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-        </svg>
-      </a>
+    {#if is_def(item.text)}
+      <button class="font-mono text-green-600" on:click={() => (is_text_open = !is_text_open)}
+        >{"<text>"}</button>
     {/if}
-  </h1>
+  </div>
 
   {#if is_def(item.text)}
-    <p class="text-sm">{@html item.text}</p>
+    {#if is_text_open}
+      <div
+        id="text"
+        transition:slide
+        class="my-2 rounded-lg bg-zinc-200 px-3 py-2 text-sm sm:px-5 sm:py-3 sm:text-base dark:bg-zinc-800">
+        {@html item.text}
+      </div>
+    {/if}
   {/if}
 </div>
+
+<style lang="postcss">
+  #text > :global(a) {
+    @apply whitespace-break-spaces rounded text-black underline decoration-gray-400 transition hover:bg-zinc-300 dark:text-white dark:decoration-zinc-500 dark:hover:bg-zinc-700;
+  }
+
+  #text > :global(p) {
+    @apply py-2;
+  }
+</style>
