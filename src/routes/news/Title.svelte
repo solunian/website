@@ -4,13 +4,19 @@
   export let title: string | undefined;
   export let url: string | undefined;
 
-  const is_def = (val: any) => val !== undefined;
+  const def = (val: any) => val !== undefined;
 </script>
 
-{#if is_def(url)}
+{#if def(url)}
   <Link href={url ?? ""}>
-    {title ?? "[untitled story]"}
+    {#if def(title)}
+      {title}
+    {:else}
+      <span class="text-red-500">{"[untitled story]"}</span>
+    {/if}
   </Link>
+{:else if def(title)}
+  {title}
 {:else}
-  {title ?? "[untitled story]"}
+  <span class="text-red-500">{"[untitled story]"}</span>
 {/if}

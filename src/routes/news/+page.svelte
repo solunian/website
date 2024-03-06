@@ -67,13 +67,15 @@
         </nav>
 
         <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
-        <h2 class="font-mono text-orange-600 sm:pl-8">from Y Combinator</h2>
+        <h2 class="font-mono text-orange-600 sm:pl-8 dark:text-orange-500">from Y Combinator</h2>
       </header>
 
       {#if item_list !== undefined}
         <div class="my-4 flex flex-col gap-0.5 text-lg sm:gap-2 sm:text-xl">
-          {#each item_list as item}
-            <Story {item} />
+          {#each item_list as item, index}
+            <div class="flex flex-row">
+              <Story {index} {item} />
+            </div>
           {/each}
         </div>
       {/if}
