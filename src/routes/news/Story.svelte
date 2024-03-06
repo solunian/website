@@ -4,7 +4,6 @@
   import Title from "./Title.svelte";
   import Link from "$lib/components/Link.svelte";
   import type { Item } from "./types";
-  import StoryButton from "./StoryButton.svelte";
 
   export let item: Item;
   export let index: number;
@@ -26,7 +25,7 @@
       {/if}
     </div>
 
-    <div class="mb-2 flex flex-row items-center gap-3 text-base">
+    <div class="mb-2 flex flex-row items-center gap-4 text-base">
       {#if def(item.by)}
         <span
           >by <Link href={`https://news.ycombinator.com/user?id=${item.by}`}>{item.by}</Link></span>
@@ -35,11 +34,14 @@
       {#if def(item.time)}
         <span class="text-zinc-500 dark:text-zinc-400">{moment(item.time, "X").fromNow()}</span>
       {/if}
-      <span class="hidden text-sm sm:inline">
+
+      <span class="hidden sm:inline">
         {#if def(item.descendants) && (item.descendants ?? 0) > 0}
-          <StoryButton href={`https://news.ycombinator.com/item?id=${item.id}`}>
-            {`${item.descendants} comment${item.descendants != 1 ? "s" : ""}`}
-          </StoryButton>
+          <Link href={`https://news.ycombinator.com/item?id=${item.id}`}>
+            <span class="font-mono text-orange-600 dark:text-orange-500">
+              {`${item.descendants} comment${item.descendants != 1 ? "s" : ""}`}
+            </span>
+          </Link>
         {/if}
       </span>
     </div>

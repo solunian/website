@@ -39,6 +39,17 @@
 
 <svelte:head>
   <title>Daniel's Hacker News</title>
+
+  <meta name="description" content="An aesthetic wrapper for Y Combinator's Hacker News." />
+
+  <meta name="og:title" content="Daniel's Hacker News" />
+  <meta name="og:description" content="An aesthetic wrapper for Y Combinator's Hacker News." />
+  <meta name="og:url" content="https://solunian.dev/news" />
+
+  <meta name="twitter:title" content="Daniel's Hacker News" />
+  <meta name="twitter:url" content="https://solunian.dev/news" />
+  <meta name="twitter:description" content="An aesthetic wrapper for Y Combinator's Hacker News." />
+
 </svelte:head>
 
 <div
@@ -67,7 +78,7 @@
         </nav>
 
         <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
-        <h2 class="font-mono text-orange-600 sm:pl-8 dark:text-orange-500">from Y Combinator</h2>
+        <h2 class="font-mono text-2xl text-orange-600 sm:pl-8 dark:text-orange-500">from Y Combinator</h2>
       </header>
 
       {#if item_list !== undefined}
