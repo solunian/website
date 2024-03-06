@@ -33,11 +33,11 @@
 </div>
 
 <style lang="postcss">
-  #text > :global(a) {
+  #text :global(a) {
     @apply whitespace-break-spaces rounded text-black underline decoration-zinc-400 transition hover:bg-zinc-300 dark:text-white dark:decoration-zinc-500 dark:hover:bg-zinc-700;
   }
 
-  #text > :global(p) {
-    @apply py-2;
+  #text :global(p) {
+    @apply py-2.5;
   }
 </style>
