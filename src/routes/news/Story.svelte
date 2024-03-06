@@ -1,5 +1,6 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
+  import moment from "moment";
   import Title from "./Title.svelte";
   import Link from "$lib/components/Link.svelte";
   import type { Item } from "./types";
@@ -25,13 +26,16 @@
       {/if}
     </div>
 
-    <div class="mb-2 flex flex-row items-center gap-4 text-base">
+    <div class="mb-2 flex flex-row items-center gap-3 text-base">
       {#if def(item.by)}
         <span
           >by <Link href={`https://news.ycombinator.com/user?id=${item.by}`}>{item.by}</Link></span>
       {/if}
 
-      <span class="text-sm">
+      {#if def(item.time)}
+        <span class="text-zinc-500 dark:text-zinc-400">{moment(item.time, "X").fromNow()}</span>
+      {/if}
+      <span class="hidden text-sm sm:inline">
         {#if def(item.descendants) && (item.descendants ?? 0) > 0}
           <StoryButton href={`https://news.ycombinator.com/item?id=${item.id}`}>
             {`${item.descendants} comment${item.descendants != 1 ? "s" : ""}`}
