@@ -10,7 +10,7 @@
 {#if def(url)}
   <Link href={url ?? ""}>
     {#if def(title)}
-      {title}
+      <span class="group-visited:text-purple-800 dark:group-visited:text-purple-300">{title}</span>
     {:else}
       <span class="text-red-500">{"[untitled story]"}</span>
     {/if}
