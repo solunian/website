@@ -1,3 +1,3 @@
-<div class="font-serif text-black dark:text-zinc-300">
+<div class="min-h-screen font-serif text-black dark:text-zinc-300">
   <slot />
 </div>

@@ -1,12 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import type { PageData } from "./$types";
   import type { ItemID, Item } from "./types";
   import Story from "./Story.svelte";
+  import Select from "./Select.svelte";
   import Link from "$lib/components/Link.svelte";
-  import { page } from "$app/stores";
-
-  export let data: PageData;
+  import moment from "moment";
 
   enum Status {
     Loading,
@@ -16,10 +14,35 @@
 
   let fetch_status: Status = Status.Loading;
   let item_list: Item[] = [];
+  let last_fetch_timestamp: string = moment().format("MMM Do, YYYY ~ HH:mm:ss");
+
+  let filter_values = ["top", "best", "new"];
+  let filter: string = filter_values[0]; // global variable basically
+
+  $: {
+    filter; // trigger reactivity
+    fetch_data();
+  }
 
   const fetch_data = async () => {
+    const get_filter_url = (query_param: string): string => {
+      if (query_param === "top") {
+        return "https://hacker-news.firebaseio.com/v0/topstories.json";
+      } else if (query_param === "new") {
+        return "https://hacker-news.firebaseio.com/v0/newstories.json";
+      } else if (query_param === "best") {
+        return "https://hacker-news.firebaseio.com/v0/beststories.json";
+      } else {
+        // top is default
+        return "https://hacker-news.firebaseio.com/v0/topstories.json";
+      }
+    };
+
     try {
-      const item_id_list: ItemID[] = await (await fetch(data.fetch_url)).json();
+      fetch_status = Status.Loading;
+
+      const fetch_url = get_filter_url(filter);
+      const item_id_list: ItemID[] = await (await fetch(fetch_url)).json();
 
       const item_promises = item_id_list
         .slice(0, 30)
@@ -28,13 +51,17 @@
       const item_responses = await Promise.all(item_promises);
       item_list = await Promise.all(item_responses.map(async (res) => await res.json()));
 
+      last_fetch_timestamp = moment().format("MMM Do, YYYY ~ HH:mm:ss");
+
       fetch_status = Status.Success;
-    } catch (err) {
+    } catch {
       fetch_status = Status.Failed;
     }
   };
 
-  onMount(fetch_data);
+  onMount(() => {
+    fetch_data();
+  });
 </script>
 
 <svelte:head>
@@ -63,25 +90,31 @@
   {/if}
 </div>
 
-{#if fetch_status === Status.Success}
-  <!-- WRAPPER FOR CENTERING -->
-  <div class="flex flex-row bg-zinc-200 dark:bg-zinc-950 lg:justify-center">
-    <div
-      class="flex flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-900 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem]">
-      <header class="flex flex-col items-center gap-1 sm:items-start">
+<!-- WRAPPER FOR CENTERING -->
+<div class="flex min-h-screen flex-row bg-zinc-200 dark:bg-zinc-950 lg:justify-center">
+  <div
+    class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-900 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem]">
+    <header class="flex flex-col items-center sm:items-start">
+      <div class="flex flex-row items-baseline gap-4 sm:gap-20">
         <nav class="flex flex-row items-baseline gap-4">
           <Link href="/">home</Link>
-          <!-- weird thingy to get Link component to target: self -->
-          <Link href={$page.url.pathname + $page.url.search}>reload</Link>
+          <button on:click={fetch_data}><Link>refetch</Link></button>
           <Link href="https://news.ycombinator.com">origin</Link>
         </nav>
 
-        <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
-        <h2 class="font-mono text-2xl text-orange-600 dark:text-orange-500 sm:pl-8">
-          from Y Combinator
-        </h2>
-      </header>
+        <Select bind:value={filter} values={filter_values} />
+      </div>
 
+      <h3 class="pt-2 font-mono text-lg text-zinc-500 dark:text-zinc-400">
+        {last_fetch_timestamp}
+      </h3>
+      <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
+      <h2 class="font-mono text-2xl text-orange-600 dark:text-orange-500 sm:pl-8">
+        from Y Combinator
+      </h2>
+    </header>
+
+    {#if fetch_status === Status.Success}
       {#if item_list !== undefined}
         <div class="my-4 flex flex-col gap-0.5 text-lg sm:gap-2 sm:text-xl">
           {#each item_list as item, index}
@@ -91,6 +124,6 @@
           {/each}
         </div>
       {/if}
-    </div>
+    {/if}
   </div>
-{/if}
+</div>
