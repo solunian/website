@@ -21,7 +21,7 @@
 
 <!-- will force a click away to close -->
 {#if is_open}
-  <button class="absolute inset-0 cursor-default" on:click={() => (is_open = false)} />
+  <button class="fixed inset-0 cursor-default" on:click={() => (is_open = false)} />
 {/if}
 
 <div class="relative flex flex-col font-mono text-lg">
