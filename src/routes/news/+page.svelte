@@ -14,7 +14,9 @@
 
   let fetch_status: Status = Status.Loading;
   let item_list: Item[] = [];
-  let last_fetch_timestamp: string = moment().format("MMM Do, YYYY ~ HH:mm:ss");
+  let last_fetch_moment = moment();
+  let last_fetch_timestamp: string =
+    last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
 
   let filter_values = ["top", "best", "new"];
   let filter: string = filter_values[0]; // global variable basically
@@ -23,6 +25,12 @@
     filter; // trigger reactivity
     fetch_data();
   }
+
+  // updating timestamp every second even though it won't change that much lol
+  setInterval(() => {
+    last_fetch_timestamp =
+      last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
+  }, 1000);
 
   const fetch_data = async () => {
     const get_filter_url = (query_param: string): string => {
@@ -51,7 +59,8 @@
       const item_responses = await Promise.all(item_promises);
       item_list = await Promise.all(item_responses.map(async (res) => await res.json()));
 
-      last_fetch_timestamp = moment().format("MMM Do, YYYY ~ HH:mm:ss");
+      // resetting timestamp moment
+      last_fetch_moment = moment();
 
       fetch_status = Status.Success;
     } catch {
