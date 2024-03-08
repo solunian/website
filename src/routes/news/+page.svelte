@@ -17,6 +17,9 @@
   let last_fetch_moment = moment();
   let last_fetch_timestamp: string =
     last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
+  const update_timestamp = () =>
+    (last_fetch_timestamp =
+      last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow());
 
   let filter_values = ["top", "best", "new"];
   let filter: string = filter_values[0]; // global variable basically
@@ -27,18 +30,15 @@
   }
 
   // updating timestamp every second even though it won't change that much lol
-  setInterval(() => {
-    last_fetch_timestamp =
-      last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
-  }, 1000);
+  setInterval(update_timestamp, 1000);
 
   const fetch_data = async () => {
-    const get_filter_url = (query_param: string): string => {
-      if (query_param === "top") {
+    const get_filter_url = (filter_value: string): string => {
+      if (filter_value === "top") {
         return "https://hacker-news.firebaseio.com/v0/topstories.json";
-      } else if (query_param === "new") {
+      } else if (filter_value === "new") {
         return "https://hacker-news.firebaseio.com/v0/newstories.json";
-      } else if (query_param === "best") {
+      } else if (filter_value === "best") {
         return "https://hacker-news.firebaseio.com/v0/beststories.json";
       } else {
         // top is default
@@ -61,6 +61,7 @@
 
       // resetting timestamp moment
       last_fetch_moment = moment();
+      update_timestamp();
 
       fetch_status = Status.Success;
     } catch {

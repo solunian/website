@@ -15,8 +15,6 @@
     current_index = index;
     is_open = false;
   };
-
-  let element: HTMLDivElement;
 </script>
 
 <!-- will force a click away to close -->
@@ -47,7 +45,7 @@
       class="absolute top-[110%] flex flex-col rounded-lg border border-zinc-300 bg-zinc-300/30 backdrop-blur dark:border-zinc-950 dark:bg-zinc-950/20">
       {#each values as current_value, index}
         <button
-          class="flex w-[5.5rem] flex-row items-center px-2 transition first:rounded-t-lg last:rounded-b-lg hover:bg-zinc-400/30 dark:hover:bg-zinc-500/20"
+          class="flex w-[5.5rem] flex-row items-center border-b border-zinc-300 px-2 transition first:rounded-t-lg last:rounded-b-lg last:border-b-0 hover:bg-zinc-400/30 dark:border-zinc-950 dark:hover:bg-zinc-500/20"
           on:click={() => handle_select(index)}>
           {#if index === current_index}
             {current_value}
