@@ -35,8 +35,8 @@
   // updating timestamp every second even though it won't change that much lol
   setInterval(update_timestamp, 1000);
 
-  let item_list_start = 0;
-  let item_list_end = 30;
+  let item_list_start = 0; // inclusive
+  let item_list_end = 30; // exclusive
   let item_id_list: ItemID[];
   const update_item_list = async (offset: number) => {
     // -inf and +inf to get to start or end of list
@@ -44,12 +44,11 @@
       item_list_start = 0;
       item_list_end = 30;
     } else if (
-      item_list_end + offset > item_id_list.length - 1 ||
+      item_list_end + offset > item_id_list.length ||
       offset === Number.POSITIVE_INFINITY
     ) {
-      // index values are -1 from length
-      item_list_start = item_id_list.length - 31;
-      item_list_end = item_id_list.length - 1;
+      item_list_start = item_id_list.length - 30;
+      item_list_end = item_id_list.length;
     } else {
       item_list_start += offset;
       item_list_end += offset;
@@ -93,6 +92,9 @@
 
       const fetch_url = get_filter_url(filter);
       item_id_list = await (await fetch(fetch_url)).json();
+      if (item_id_list.length < item_list_end) {
+        item_list_end = item_id_list.length;
+      }
 
       const item_promises = item_id_list
         .slice(item_list_start, item_list_end)
@@ -104,6 +106,10 @@
       // resetting timestamp moment
       last_fetch_moment = moment();
       update_timestamp();
+
+      // change indexes to default whenever refetch
+      item_list_start = 0;
+      item_list_end = 30;
 
       fetch_status = Status.Success;
     } catch {
