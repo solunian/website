@@ -14,10 +14,15 @@
     class="flex max-w-5xl flex-col gap-4 px-6 pb-8 pt-4 sm:gap-8 sm:px-12 sm:pb-10 sm:pt-6 md:px-20 md:pb-12 md:pt-10">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
       <div class="mb-4 flex flex-row items-center gap-6">
-        <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
         <a href="/">
           <img src="/website/icon.png" alt="icon" class="h-12" />
         </a>
+        <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
+
+        <a
+          href="/news"
+          class="inline-block rounded-3xl border-2 border-orange-700 bg-orange-500 px-2 py-0.5 font-mono text-base text-white transition hover:bg-orange-600"
+          >/news</a>
       </div>
 
       <p>Hi there! I'm a high school senior in the Bay Area.</p>
@@ -35,7 +40,9 @@
         <Link href="https://github.com/solunian/two-colors"><b>two-colors</b></Link>, a game to
         treat amblyopia, and
         <Link href="https://github.com/solunian/tart"><b>tart</b></Link>, a simple project
-        management tool.
+        management tool. More on my <Link href="https://github.com/solunian"
+          ><span class="text-green-600">GitHub</span></Link
+        >!
       </p>
 
       <p>
@@ -44,7 +51,7 @@
       </p>
     </header>
 
-    <Section id="projects" see_more="GitHub" see_more_href="https://github.com/solunian">
+    <Section id="projects">
       <Project title="Personal Website" link="/">
         Huh. I guess you're already here... well, that's something, isn't it? Anyway, have a nice
         day! Stay determined!
@@ -165,6 +172,6 @@
 </div>
 
 <footer
-  class="flex flex-row justify-center bg-gray-50 pb-4 pt-2 font-mono text-gray-300 dark:bg-zinc-950 dark:text-zinc-700">
+  class="flex flex-row justify-center bg-zinc-50 pb-4 pt-2 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
   being alive.
 </footer>

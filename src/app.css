@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend&family=Nova+Mono&family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend&family=Nova+Mono&family=Lora:ital,wght@0,400..700;1,400..700&&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,5 +9,5 @@ html {
 }
 
 body {
-  @apply text-xl text-gray-500 dark:bg-zinc-900 dark:text-zinc-300;
+  @apply text-xl text-zinc-500 dark:bg-zinc-900 dark:text-zinc-300;
 }
