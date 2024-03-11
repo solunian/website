@@ -7,6 +7,7 @@
   import moment from "moment";
   import { fade } from "svelte/transition";
   import About from "./About.svelte";
+  import FeedNavigation from "./FeedNavigation.svelte";
 
   enum Status {
     Loading,
@@ -34,28 +35,67 @@
   // updating timestamp every second even though it won't change that much lol
   setInterval(update_timestamp, 1000);
 
-  const fetch_data = async () => {
-    const get_filter_url = (filter_value: string): string => {
-      if (filter_value === "top") {
-        return "https://hacker-news.firebaseio.com/v0/topstories.json";
-      } else if (filter_value === "new") {
-        return "https://hacker-news.firebaseio.com/v0/newstories.json";
-      } else if (filter_value === "best") {
-        return "https://hacker-news.firebaseio.com/v0/beststories.json";
-      } else {
-        // top is default
-        return "https://hacker-news.firebaseio.com/v0/topstories.json";
-      }
-    };
+  let item_list_start = 0;
+  let item_list_end = 30;
+  let item_id_list: ItemID[];
+  const update_item_list = async (offset: number) => {
+    // -inf and +inf to get to start or end of list
+    if (item_list_start + offset < 0 || offset === Number.NEGATIVE_INFINITY) {
+      item_list_start = 0;
+      item_list_end = 30;
+    } else if (
+      item_list_end + offset > item_id_list.length - 1 ||
+      offset === Number.POSITIVE_INFINITY
+    ) {
+      // index values are -1 from length
+      item_list_start = item_id_list.length - 31;
+      item_list_end = item_id_list.length - 1;
+    } else {
+      item_list_start += offset;
+      item_list_end += offset;
+    }
+    try {
+      fetch_status = Status.Loading;
 
+      const item_promises = item_id_list
+        .slice(item_list_start, item_list_end)
+        .map((id) => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`));
+
+      const item_responses = await Promise.all(item_promises);
+      item_list = await Promise.all(item_responses.map(async (res) => await res.json()));
+
+      // resetting timestamp moment ... no need to update timestamp because new lists not fetched
+      // last_fetch_moment = moment();
+      // update_timestamp();
+
+      fetch_status = Status.Success;
+    } catch {
+      fetch_status = Status.Failed;
+    }
+  };
+
+  const get_filter_url = (filter_value: string): string => {
+    if (filter_value === "top") {
+      return "https://hacker-news.firebaseio.com/v0/topstories.json";
+    } else if (filter_value === "new") {
+      return "https://hacker-news.firebaseio.com/v0/newstories.json";
+    } else if (filter_value === "best") {
+      return "https://hacker-news.firebaseio.com/v0/beststories.json";
+    } else {
+      // top is default
+      return "https://hacker-news.firebaseio.com/v0/topstories.json";
+    }
+  };
+
+  const fetch_data = async () => {
     try {
       fetch_status = Status.Loading;
 
       const fetch_url = get_filter_url(filter);
-      const item_id_list: ItemID[] = await (await fetch(fetch_url)).json();
+      item_id_list = await (await fetch(fetch_url)).json();
 
       const item_promises = item_id_list
-        .slice(0, 30)
+        .slice(item_list_start, item_list_end)
         .map((id) => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`));
 
       const item_responses = await Promise.all(item_promises);
@@ -143,10 +183,24 @@
         <div class="my-4 flex flex-col gap-0.5 text-lg sm:gap-2 sm:text-xl">
           {#each item_list as item, index}
             <div class="flex flex-row">
-              <Story {index} {item} />
+              <Story index={item_list_start + index} {item} />
             </div>
           {/each}
         </div>
+
+        <FeedNavigation
+          farleft={() => {
+            update_item_list(Number.NEGATIVE_INFINITY);
+          }}
+          left={() => {
+            update_item_list(-30);
+          }}
+          right={() => {
+            update_item_list(30);
+          }}
+          farright={() => {
+            update_item_list(Number.POSITIVE_INFINITY);
+          }} />
       {/if}
     {:else if fetch_status === Status.Failed}
       <div class="mt-24 flex w-full flex-col items-center">
