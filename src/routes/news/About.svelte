@@ -35,7 +35,7 @@
       </svg>
     </button>
 
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 font-normal">
       <h1 class="text-3xl underline">about</h1>
 
       <p class="text-lg">
@@ -44,7 +44,7 @@
       </p>
 
       <p class="text-lg">
-        <span class="font-bold">news filters:</span> "top" are typically new/upvoted stories, "best"
+        <span class="font-bold italic">news filters:</span> "top" are typically new/upvoted stories, "best"
         are upvoted stories from a longer time period (around a couple days), and "new" are most recently
         posted stories.
       </p>
