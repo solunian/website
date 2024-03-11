@@ -6,6 +6,7 @@
   import Link from "$lib/components/Link.svelte";
   import moment from "moment";
   import { fade } from "svelte/transition";
+  import About from "./About.svelte";
 
   enum Status {
     Loading,
@@ -159,7 +160,7 @@
               viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
-              class="h-8 w-8">
+              class="h-8 w-8 stroke-white">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -176,5 +177,5 @@
 
 <footer
   class="flex flex-row justify-center border-2 border-zinc-300 bg-zinc-200 pb-4 pt-2 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
-  about.
+  <About />
 </footer>

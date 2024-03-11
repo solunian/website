@@ -51,6 +51,7 @@
     <button
       class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
       on:click={close_modal}
+      tabindex="-1"
       transition:fade={{ duration: 200 }} />
 
     <button
