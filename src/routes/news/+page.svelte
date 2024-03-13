@@ -180,7 +180,7 @@
           loading...
         </div>
         <img
-          src="/website/nyan_cat_kawaii.gif"
+          src="/website/improved_nyan.gif"
           alt="nyan cat gif"
           class="w-64 rounded-xl sm:w-80 md:w-96" />
       </div>
