@@ -54,6 +54,10 @@
     </header>
 
     <Section id="projects">
+      <Project title="Daniel's Hacker News" link="/news" starred>
+        An aesthetic wrapper for Y Combinator's Hacker News. Just a nice way to check out tech news.
+      </Project>
+
       <Project title="Personal Website" link="/">
         Huh. I guess you're already here... well, that's something, isn't it? Anyway, have a nice
         day! Stay determined!
@@ -70,7 +74,7 @@
         >!
       </Project>
 
-      <Project title="Tinovation Website" link="https://tinovation.org/" starred>
+      <Project title="Tinovation Website" link="https://tinovation.org/">
         The amazing website for the revolutionized Tinovation club! Includes general club
         information, programming resources, a showcase for members' projects, and a cool
         leaderboard.
@@ -99,10 +103,10 @@
         medications. For Los Altos Hacks VII.
       </Project>
 
-      <Project title="College Tree" link="https://college-tree.vercel.app/">
+      <!-- <Project title="College Tree" link="https://college-tree.vercel.app/">
         Website for matching activities to high school students who are trying to get into college.
         For CUHSD Hackathon IV.
-      </Project>
+      </Project> -->
 
       <Project title="Dripdrop" link="https://dripdrop-two.vercel.app/">
         "The next-gen water source." A website to test basic

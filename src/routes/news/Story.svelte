@@ -50,7 +50,7 @@
       <div
         id="text"
         transition:slide
-        class="text-wrap rounded-lg bg-zinc-200 px-3 py-2 text-sm dark:bg-zinc-800 sm:px-5 sm:py-3 sm:text-base">
+        class="text-wrap rounded-lg bg-zinc-200 px-3 py-2 text-sm sm:px-5 sm:py-3 sm:text-base dark:bg-zinc-800">
         {@html item.text}
       </div>
     {/if}
