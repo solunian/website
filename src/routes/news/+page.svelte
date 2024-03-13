@@ -150,9 +150,9 @@
 </div> -->
 
 <!-- WRAPPER FOR CENTERING -->
-<div class="flex flex-grow flex-row bg-zinc-200 lg:justify-center dark:bg-zinc-950">
+<div class="flex flex-grow flex-row bg-zinc-200 dark:bg-zinc-950 lg:justify-center">
   <div
-    class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem] dark:border-zinc-800 dark:bg-zinc-900">
+    class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-900 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem]">
     <header class="flex flex-col items-center sm:items-start">
       <div class="flex flex-row items-baseline gap-4 sm:gap-20">
         <nav class="flex flex-row items-baseline gap-4">
@@ -168,7 +168,7 @@
         {last_fetch_timestamp}
       </h3>
       <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
-      <h2 class="font-mono text-2xl text-orange-600 sm:pl-8 dark:text-orange-500">
+      <h2 class="font-mono text-2xl text-orange-600 dark:text-orange-500 sm:pl-8">
         from Y Combinator
       </h2>
     </header>
@@ -176,7 +176,7 @@
     {#if fetch_status === Status.Loading}
       <div class="relative mt-24 flex w-full flex-col items-center" in:fade={{ duration: 200 }}>
         <div
-          class="absolute top-12 font-sans text-3xl text-pink-900 sm:top-16 sm:text-4xl md:top-20 md:text-5xl">
+          class="absolute top-12 font-sans text-3xl text-zinc-800 sm:top-16 sm:text-4xl md:top-20 md:text-5xl">
           loading...
         </div>
         <img
