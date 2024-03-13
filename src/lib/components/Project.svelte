@@ -2,18 +2,23 @@
   import Link from "./Link.svelte";
 
   export let title: string;
-  export let link: string;
+  export let link: string | undefined = undefined;
+  export let github_link: string | undefined = undefined;
   export let starred: boolean = false;
 </script>
 
 <div>
   <h3 class="inline">
-    <Link href={link}>
-      <span class="font-semibold">{title}</span>
-    </Link>
+    {#if link !== undefined}
+      <Link href={link}>
+        <span class="font-semibold">{title}</span>
+      </Link>
+    {:else}
+      <span class="font-semibold text-black dark:text-white">{title}</span>
+    {/if}
 
     {#if starred}
-      <button id="tooltip-target">
+      <button id="tooltip-target" class="cursor-default">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -35,6 +40,26 @@
   </h3>
 
   <slot />
+
+  {#if github_link !== undefined}
+    <a
+      href={github_link}
+      target="_blank"
+      class="inline rounded-lg px-1 text-green-600 transition hover:bg-zinc-200 dark:hover:bg-zinc-700">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="inline h-5 w-5 -translate-y-0.5">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+      </svg>
+    </a>
+  {/if}
 </div>
 
 <style lang="postcss">

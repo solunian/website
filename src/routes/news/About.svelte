@@ -19,7 +19,7 @@
     transition:fade={{ duration: 200 }} />
 
   <div
-    class="w-full rounded-xl border-2 border-zinc-300 bg-zinc-100 p-3 font-sans dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300 sm:w-[36rem]">
+    class="w-full rounded-xl border-2 border-zinc-300 bg-zinc-100 p-3 font-sans sm:w-[36rem] dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300">
     <button
       class="absolute right-2 top-2 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
       on:click={close}
