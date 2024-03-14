@@ -11,7 +11,7 @@
   <h1 class="font-mono text-3xl text-black md:text-4xl dark:text-white">
     {$page.status}: {$page.error?.message}
   </h1>
-  <img src="/website/polite_cat.jpg" alt="polite cat" class="rounded-xl" />
+  <img src="/website/polite_cat.avif" alt="polite cat" class="rounded-xl" />
 
   <Link href="/"><span class="font-mono text-3xl">Home</span></Link>
 </div>

@@ -180,8 +180,8 @@
           loading...
         </div>
         <img
-          src="/website/improved_nyan.gif"
-          alt="nyan cat gif"
+          src="/website/improved_nyan.avif"
+          alt="nyan cat"
           class="w-64 rounded-xl sm:w-80 md:w-96" />
       </div>
     {:else if fetch_status === Status.Success}
@@ -228,7 +228,7 @@
             </svg>
           </button>
           <div class="absolute bottom-2 right-2 font-sans text-4xl text-red-700">failed.</div>
-          <img src="/website/polite_cat.jpg" alt="polite cat" class="w-96 rounded-xl" />
+          <img src="/website/polite_cat.avif" alt="polite cat" class="w-96 rounded-xl" />
         </div>
       </div>
     {/if}

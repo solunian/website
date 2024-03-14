@@ -15,7 +15,7 @@
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
       <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
 
-        <img src="/website/icon.png" alt="icon" class="h-12" />
+        <img src="/website/icon.avif" alt="icon" class="h-12" />
 
         <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
 
