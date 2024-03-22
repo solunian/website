@@ -67,13 +67,13 @@
         day! Stay determined!
       </Project>
 
-      <Project
+      <!-- <Project
         title="Unimash"
         link="https://unimash.vercel.app/"
         github_link="https://github.com/solunian/website">
         A joke website replicating FaceMash for "uni"-versities. Just some fun with MongoDB,
         SvelteKit's form actions, and chess rating systems.
-      </Project>
+      </Project> -->
 
       <Project
         title="Jazzboard"
