@@ -1,6 +1,6 @@
 # Daniel's Hacker News
 
-Hi, Daniel here! This is an aesthetic wrapper for Y Combinator's Hacker News. 
+Hi, Daniel here! This is an aesthetic wrapper for Y Combinator's Hacker News.
 I just wanted to have a nice way to check coding news, and it only took a week.
 
 ## News Filters

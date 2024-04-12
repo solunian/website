@@ -14,17 +14,9 @@
     class="flex max-w-5xl flex-col gap-4 px-6 pb-8 pt-4 sm:gap-8 sm:px-12 sm:pb-10 sm:pt-6 md:px-20 md:pb-12 md:pt-10">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
       <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
-
         <img src="/website/icon.avif" alt="icon" class="h-12" />
 
         <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
-
-        <span>
-          <a
-            href="/news"
-            class="inline-block rounded-3xl border-2 border-orange-700 bg-orange-500 px-2 py-0.5 font-mono text-base text-white transition hover:bg-orange-600"
-            >/news</a>
-        </span>
       </div>
 
       <p>Hi there! I'm a high school senior in the Bay Area.</p>
@@ -157,6 +149,7 @@
         folder="sketches"
         grayscale
         filenames={[
+          "justin_avy.jpg",
           "susan.jpg",
           "rishi.jpg",
           "annie.jpg",
