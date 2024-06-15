@@ -19,7 +19,7 @@
         <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
       </div>
 
-      <p>Hi there! I'm a high school senior in the Bay Area.</p>
+      <p>Hi there! I'm a freshly graduated high school student in the Bay Area.</p>
 
       <p>
         I enjoy creating <Link href="#projects">[cool things]</Link> with code,
