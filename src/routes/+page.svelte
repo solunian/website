@@ -19,12 +19,16 @@
         <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
       </div>
 
-      <p>Hi there! I'm a freshly graduated high school student in the Bay Area.</p>
+      <p>
+        Hi there! I'm a first year college student from the Bay Area, studying CS at UC Santa
+        Barbara.
+      </p>
 
       <p>
         I enjoy creating <Link href="#projects">[cool things]</Link> with code,
         <Link href="#sketches">[sketching]</Link>, making <Link href="#pixel-art">[pixel art]</Link
-        >, and writing <Link href="#stories">[stories]</Link>. Feel free to check out my work below!
+        >, and writing <Link href="#stories">[stories]</Link> (lol haven't done this in a bit). Feel
+        free to check out my work below!
       </p>
 
       <p>
@@ -59,21 +63,20 @@
         day! Stay determined!
       </Project>
 
-      <!-- <Project
+      <Project
         title="Unimash"
         link="https://unimash.vercel.app/"
         github_link="https://github.com/solunian/website">
         A joke website replicating FaceMash for "uni"-versities. Just some fun with MongoDB,
         SvelteKit's form actions, and chess rating systems.
-      </Project> -->
+      </Project>
 
       <Project
         title="Jazzboard"
         link="https://jazzboard.vercel.app/"
         github_link="https://github.com/solunian/jazzboard">
-        A way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
-          href="https://outernet.hackclub.com">Outernet</Link
-        >!
+        A painfully terrible way to play jazz piano lead sheets on a computer keyboard. Prototyped
+        at Hack Club's <Link href="https://outernet.hackclub.com">Outernet</Link>!
       </Project>
 
       <Project
