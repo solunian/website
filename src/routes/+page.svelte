@@ -152,6 +152,8 @@
         folder="sketches"
         grayscale
         filenames={[
+          "vishnu.jpg",
+          "ishaan.jpg",
           "angela.jpg",
           "sunny.jpg",
           "justin_avy.jpg",
