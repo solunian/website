@@ -51,6 +51,13 @@
 
     <Section id="projects">
       <Project
+        title="Countdown"
+        link="https://countdowning.vercel.app/"
+        github_link="https://github.com/solunian/countdown">
+        A pretty clean and pretty scuffed countdown generator for deadlines and timers. Just a kinda
+        meh project with spaghetti code made over a weekend.
+      </Project>
+      <Project
         title="Daniel's Hacker News"
         link="/news"
         github_link="https://github.com/solunian/website/tree/main/src/routes/news"
