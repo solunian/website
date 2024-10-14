@@ -11,10 +11,10 @@
   <h3 class="inline">
     {#if link !== undefined}
       <Link href={link}>
-        <span class="font-semibold">{title}</span>
+        <span class="font-medium">{title}</span>
       </Link>
     {:else}
-      <span class="font-semibold text-black dark:text-white">{title}</span>
+      <span class="font-medium text-black dark:text-white">{title}</span>
     {/if}
 
     {#if starred}

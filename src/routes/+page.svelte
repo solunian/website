@@ -16,7 +16,7 @@
       <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
         <img src="/website/icon.avif" alt="icon" class="h-12" />
 
-        <h1 class="font-lexend text-4xl font-bold text-black dark:text-white">Daniel Cui</h1>
+        <h1 class="font-lexend text-4xl font-medium text-black dark:text-white">Daniel Cui</h1>
       </div>
 
       <p>
@@ -33,19 +33,23 @@
 
       <p>
         Right now, I'm working on <Link href="https://github.com/solunian/paperplane"
-          ><b>paperplane</b></Link
+          ><b class="font-medium">paperplane</b></Link
         >, a text editor/format for enjoyable writing,
-        <Link href="https://github.com/solunian/two-colors"><b>two-colors</b></Link>, a game to
-        treat amblyopia, and
-        <Link href="https://github.com/solunian/tart"><b>tart</b></Link>, a simple project
-        management tool. More on my <Link href="https://github.com/solunian"
+        <Link href="https://github.com/solunian/two-colors"
+          ><b class="font-medium">two-colors</b></Link
+        >, a game to treat amblyopia, and
+        <Link href="https://github.com/solunian/tart"><b class="font-medium">tart</b></Link>, a
+        simple project management tool. More on my <Link href="https://github.com/solunian"
           ><span class="text-green-600">GitHub</span></Link
         >!
       </p>
 
       <p>
         Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
-        or <span class="text-[#5865F2]">@solunian</span> on Discord.
+        or
+        <span
+          class="inline-block bg-gradient-to-r from-[#FF0069] to-[#5865F2] bg-clip-text text-transparent"
+          >@solunian</span> on Instagram or Discord.
       </p>
     </header>
 
