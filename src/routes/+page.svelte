@@ -26,9 +26,8 @@
 
       <p>
         I enjoy creating <Link href="#projects">[cool things]</Link> with code,
-        <Link href="#sketches">[sketching]</Link>, making <Link href="#pixel-art">[pixel art]</Link
-        >, and writing <Link href="#stories">[stories]</Link> (lol haven't done this in a bit). Feel
-        free to check out my work below!
+        <Link href="#sketches">[sketching]</Link>, and making
+        <Link href="#pixel-art">[pixel art]</Link>. Feel free to check out my work below!
       </p>
 
       <p>
@@ -55,7 +54,13 @@
 
     <Section id="projects">
       <Project
-        title="Countdown"
+        title="lua-docs"
+        link="https://lua-docs.vercel.app/"
+        github_link="https://github.com/solunian/lua-docs">
+        Aesthetic documentation for the coolest scripting language!
+      </Project>
+      <Project
+        title="countdown"
         link="https://countdowning.vercel.app/"
         github_link="https://github.com/solunian/countdown">
         A pretty clean and pretty scuffed countdown generator for deadlines and timers. Just a kinda
@@ -75,7 +80,7 @@
       </Project>
 
       <Project
-        title="Unimash"
+        title="unimash"
         link="https://unimash.vercel.app/"
         github_link="https://github.com/solunian/website">
         A joke website replicating FaceMash for "uni"-versities. Just some fun with MongoDB,
@@ -83,7 +88,7 @@
       </Project>
 
       <Project
-        title="Jazzboard"
+        title="jazzboard"
         link="https://jazzboard.vercel.app/"
         github_link="https://github.com/solunian/jazzboard">
         A painfully terrible way to play jazz piano lead sheets on a computer keyboard. Prototyped
@@ -144,7 +149,7 @@
       </Project> -->
 
       <Project
-        title="Dripdrop"
+        title="dripdrop"
         link="https://dripdrop-two.vercel.app/"
         github_link="https://github.com/solunian/dripdrop">
         "The next-gen water source." A website to test basic
@@ -211,12 +216,12 @@
         ]} />
     </Section>
 
-    <Section id="stories">
+    <!-- <Section id="stories">
       <p>
         Note: I had written several stories a while ago, but looking back now, they are definitely
         not my best work. So, back to the drawing board I go!
       </p>
-    </Section>
+    </Section> -->
   </div>
 </div>
 
