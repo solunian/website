@@ -31,12 +31,12 @@
       </p>
 
       <p>
-        Right now, I'm working on <Link href="https://github.com/solunian/paperplane"
-          ><b class="font-medium">paperplane</b></Link
-        >, a text editor/format for enjoyable writing,
-        <Link href="https://github.com/solunian/two-colors"
-          ><b class="font-medium">two-colors</b></Link
-        >, a game to treat amblyopia, and
+        Right now, I'm working on
+        <Link href="https://github.com/solunian/two-colors">
+          <b class="font-medium">two-colors</b></Link
+        >, a game to treat amblyopia. I'm also planning to make <Link
+          href="https://github.com/solunian/paperplane"><b class="font-medium">paperplane</b></Link
+        >, a text editor/format for enjoyable writing, and
         <Link href="https://github.com/solunian/tart"><b class="font-medium">tart</b></Link>, a
         simple project management tool. More on my <Link href="https://github.com/solunian"
           ><span class="text-green-600">GitHub</span></Link
