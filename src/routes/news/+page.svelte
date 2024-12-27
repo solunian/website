@@ -212,6 +212,7 @@
       <div class="mt-24 flex w-full flex-col items-center">
         <div class="relative">
           <button
+            aria-label="refetch"
             on:click={fetch_data}
             class="absolute right-1 top-0 translate-y-1 rounded-lg p-1 transition hover:bg-zinc-950/20">
             <svg

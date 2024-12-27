@@ -11,6 +11,7 @@
   <div
     class="group flex flex-row items-center rounded-3xl border-2 border-zinc-300 bg-zinc-100 transition hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 hover:dark:border-zinc-700">
     <button
+      aria-label="farleft"
       class="rounded-l-3xl border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
       on:click={farleft}>
       <svg
@@ -27,6 +28,7 @@
       </svg>
     </button>
     <button
+      aria-label="left"
       class=" border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
       on:click={left}>
       <svg
@@ -40,6 +42,7 @@
       </svg>
     </button>
     <button
+      aria-label="right"
       class="border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
       on:click={right}>
       <svg
@@ -53,6 +56,7 @@
       </svg>
     </button>
     <button
+      aria-label="farright"
       class="rounded-r-3xl px-3 py-1 transition hover:bg-zinc-200 hover:dark:bg-zinc-800"
       on:click={farright}>
       <svg

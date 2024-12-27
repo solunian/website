@@ -4,7 +4,7 @@
   export let title: string | undefined;
   export let url: string | undefined;
 
-  const def = (val: any) => val !== undefined;
+  const def = (val: string | undefined) => val !== undefined;
 </script>
 
 {#if def(url)}

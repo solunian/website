@@ -45,6 +45,7 @@
     <a
       href={github_link}
       target="_blank"
+      aria-label="github link"
       class="inline rounded-lg px-1 text-green-600 transition hover:bg-zinc-200 dark:hover:bg-zinc-700">
       <svg
         xmlns="http://www.w3.org/2000/svg"

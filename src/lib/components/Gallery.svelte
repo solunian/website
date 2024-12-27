@@ -49,12 +49,14 @@
 <dialog class="bg-transparent" bind:this={modal}>
   {#if modal_open_idx !== -1}
     <button
+      aria-label="background modal close"
       class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
       on:click={close_modal}
       tabindex="-1"
-      transition:fade={{ duration: 200 }} />
+      transition:fade={{ duration: 200 }}></button>
 
     <button
+      aria-label="x modal close"
       class="absolute right-1 top-1 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
       on:click={close_modal}
       transition:fade={{ duration: 200 }}>

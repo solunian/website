@@ -2,7 +2,7 @@
   export let href: string | undefined = undefined;
 
   const target: string = href?.startsWith("#") || href?.startsWith("/") ? "_self" : "_blank";
-  const def = (val: any) => val !== undefined;
+  const def = (val: string | undefined) => val !== undefined;
 </script>
 
 {#if def(href)}

@@ -8,7 +8,7 @@
   export let item: Item;
   export let index: number;
 
-  const def = (val: any) => val !== undefined;
+  const def = (val: number | string | undefined) => val !== undefined;
 
   let is_text_open = false;
 </script>

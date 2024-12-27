@@ -19,7 +19,8 @@
 
 <!-- will force a click away to close -->
 {#if is_open}
-  <button class="fixed inset-0 cursor-default" on:click={() => (is_open = false)} />
+  <button aria-label="close" class="fixed inset-0 cursor-default" on:click={() => (is_open = false)}
+  ></button>
 {/if}
 
 <div class="relative flex flex-col font-mono text-lg">

@@ -13,14 +13,16 @@
 
 <dialog bind:this={modal} class="bg-transparent">
   <button
+    aria-label="background modal close"
     class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
     on:click={close}
     tabindex="-1"
-    transition:fade={{ duration: 200 }} />
+    transition:fade={{ duration: 200 }}></button>
 
   <div
     class="w-full rounded-xl border-2 border-zinc-300 bg-zinc-100 p-3 font-sans sm:w-[36rem] dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300">
     <button
+      aria-label="x modal close"
       class="absolute right-2 top-2 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
       on:click={close}
       transition:fade={{ duration: 200 }}>
