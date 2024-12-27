@@ -11,6 +11,7 @@
     - ~~classes "self-center justify-self-center" in dialog tag only worked on chrome~~
     - did some weird absolute positioning with left, top, and translate idk i just searched it up and fiddled around
     - im going to sleep. this was dumb.
+    - never mind. it was still broken. dialogs just didn't cover the entire viewport for some reason. and then one modal needed padding. absolutely painful.
   - gradient looked a little weird/washed out with OKLCH color space so changed back to srgb in main page for `@solunian` text -> `bg-linear-to-r/srgb`
 
 ### Old Notes

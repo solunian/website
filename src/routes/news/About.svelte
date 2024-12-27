@@ -20,7 +20,7 @@
     transition:fade={{ duration: 200 }}></button>
 
   <div
-    class="absolute top-1/2 left-1/2 w-full -translate-1/2 rounded-xl border-2 border-zinc-300 bg-zinc-100 p-3 font-sans sm:w-[36rem] dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300">
+    class="absolute top-1/2 left-1/2 -translate-1/2 rounded-xl border-2 border-zinc-300 bg-zinc-100 p-3 font-sans w-full max-w-[75vw] sm:w-[36rem] dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300">
     <button
       aria-label="x modal close"
       class="absolute top-2 right-2 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"

@@ -38,4 +38,10 @@
   button {
     @apply cursor-pointer;
   }
+
+  /* um. for some reason dialog had a bit less than the viewport dims... idk just searched this up */
+  dialog {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
 }
