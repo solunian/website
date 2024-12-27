@@ -13,10 +13,10 @@
 
 <div class="flex flex-row justify-center">
   <div
-    class="group flex flex-row items-center rounded-3xl border-2 border-zinc-300 bg-zinc-100 transition hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 hover:dark:border-zinc-700">
+    class="group flex flex-row items-center rounded-3xl border-2 border-zinc-300 bg-zinc-100 transition hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700">
     <button
       aria-label="farleft"
-      class="rounded-l-3xl border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
+      class="rounded-l-3xl border-r-2 border-zinc-300 px-3 py-1 transition group-hover:border-zinc-400 hover:bg-zinc-200 dark:border-zinc-800 dark:group-hover:border-zinc-700 dark:hover:bg-zinc-800"
       onclick={farleft}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@
     </button>
     <button
       aria-label="left"
-      class=" border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
+      class=" border-r-2 border-zinc-300 px-3 py-1 transition group-hover:border-zinc-400 hover:bg-zinc-200 dark:border-zinc-800 dark:group-hover:border-zinc-700 dark:hover:bg-zinc-800"
       onclick={left}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
     </button>
     <button
       aria-label="right"
-      class="border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
+      class="border-r-2 border-zinc-300 px-3 py-1 transition group-hover:border-zinc-400 hover:bg-zinc-200 dark:border-zinc-800 dark:group-hover:border-zinc-700 dark:hover:bg-zinc-800"
       onclick={right}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
     </button>
     <button
       aria-label="farright"
-      class="rounded-r-3xl px-3 py-1 transition hover:bg-zinc-200 hover:dark:bg-zinc-800"
+      class="rounded-r-3xl px-3 py-1 transition hover:bg-zinc-200 dark:hover:bg-zinc-800"
       onclick={farright}>
       <svg
         xmlns="http://www.w3.org/2000/svg"

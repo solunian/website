@@ -24,7 +24,7 @@
 </script>
 
 <section class="my-2">
-  <div class="mb-6 mt-4 flex flex-row items-baseline justify-between">
+  <div class="mt-4 mb-6 flex flex-row items-baseline justify-between">
     <h2 {id} class="font-mono text-3xl font-bold">
       {#each (name ?? id).split("") as letter, idx}
         <span class={rainbow_colors[(color_idx + idx) % rainbow_colors.length]}>{letter}</span>
