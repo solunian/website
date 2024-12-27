@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import type { ItemID, Item } from "./types";
   import Story from "./Story.svelte";
   import Select from "./Select.svelte";
@@ -15,27 +14,26 @@
     Failed,
   }
 
-  let fetch_status: Status = Status.Loading;
-  let item_list: Item[] = [];
+  let fetch_status: Status = $state(Status.Loading);
+  let item_list: Item[] = $state([]);
   let last_fetch_moment = moment();
-  let last_fetch_timestamp: string =
-    last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
+  let last_fetch_timestamp: string = $state(
+    last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow()
+  );
   const update_timestamp = () =>
     (last_fetch_timestamp =
       last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow());
 
   let filter_values = ["top", "best", "new"];
-  let filter: string = filter_values[0]; // global variable basically
+  let filter: string = $state(filter_values[0]); // global variable basically
 
-  $: {
-    filter; // trigger reactivity
+  $effect(() => {
     fetch_data();
-  }
-
+  });
   // updating timestamp every second even though it won't change that much lol
   setInterval(update_timestamp, 1000);
 
-  let item_list_start = 0; // inclusive
+  let item_list_start = $state(0); // inclusive
   let item_list_end = 30; // exclusive
   let item_id_list: ItemID[];
   const update_item_list = async (offset: number) => {
@@ -116,10 +114,6 @@
       fetch_status = Status.Failed;
     }
   };
-
-  onMount(() => {
-    fetch_data();
-  });
 </script>
 
 <svelte:head>
@@ -150,14 +144,14 @@
 </div> -->
 
 <!-- WRAPPER FOR CENTERING -->
-<div class="flex flex-grow flex-row bg-zinc-200 dark:bg-zinc-950 lg:justify-center">
+<div class="flex flex-grow flex-row bg-zinc-200 lg:justify-center dark:bg-zinc-950">
   <div
-    class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-900 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem]">
+    class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem] dark:border-zinc-800 dark:bg-zinc-900">
     <header class="flex flex-col items-center sm:items-start">
       <div class="flex flex-row items-baseline gap-4 sm:gap-20">
         <nav class="flex flex-row items-baseline gap-4">
           <Link href="/">home</Link>
-          <button on:click={fetch_data}><Link>refetch</Link></button>
+          <button onclick={fetch_data}><Link>refetch</Link></button>
           <Link href="https://news.ycombinator.com">origin</Link>
         </nav>
 
@@ -168,7 +162,7 @@
         {last_fetch_timestamp}
       </h3>
       <h1 class="font-mono text-5xl sm:text-6xl">Hacker News</h1>
-      <h2 class="font-mono text-2xl text-orange-600 dark:text-orange-500 sm:pl-8">
+      <h2 class="font-mono text-2xl text-orange-600 sm:pl-8 dark:text-orange-500">
         from Y Combinator
       </h2>
     </header>
@@ -176,12 +170,12 @@
     {#if fetch_status === Status.Loading}
       <div class="relative mt-24 flex w-full flex-col items-center" in:fade={{ duration: 200 }}>
         <div
-          class="absolute top-12 font-sans text-3xl text-pink-900 sm:top-16 sm:text-4xl md:top-20 md:text-5xl">
+          class="absolute top-12 font-sans text-3xl text-zinc-800 sm:top-16 sm:text-4xl md:top-20 md:text-5xl">
           loading...
         </div>
         <img
-          src="/website/nyan_cat_kawaii.gif"
-          alt="nyan cat gif"
+          src="/website/improved_nyan.avif"
+          alt="nyan cat"
           class="w-64 rounded-xl sm:w-80 md:w-96" />
       </div>
     {:else if fetch_status === Status.Success}
@@ -212,7 +206,8 @@
       <div class="mt-24 flex w-full flex-col items-center">
         <div class="relative">
           <button
-            on:click={fetch_data}
+            aria-label="refetch"
+            onclick={fetch_data}
             class="absolute right-1 top-0 translate-y-1 rounded-lg p-1 transition hover:bg-zinc-950/20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +223,7 @@
             </svg>
           </button>
           <div class="absolute bottom-2 right-2 font-sans text-4xl text-red-700">failed.</div>
-          <img src="/website/polite_cat.jpg" alt="polite cat" class="w-96 rounded-xl" />
+          <img src="/website/polite_cat.avif" alt="polite cat" class="w-96 rounded-xl" />
         </div>
       </div>
     {/if}
