@@ -11,7 +11,7 @@
 
 <div class="flex w-full flex-row lg:justify-center">
   <div
-    class="flex max-w-5xl flex-col gap-4 px-6 pb-8 pt-4 sm:gap-8 sm:px-12 sm:pb-10 sm:pt-6 md:px-20 md:pb-12 md:pt-10">
+    class="flex max-w-5xl flex-col gap-4 px-6 pt-4 pb-8 sm:gap-8 sm:px-12 sm:pt-6 sm:pb-10 md:px-20 md:pt-10 md:pb-12">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
       <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
         <img src="/website/icon.avif" alt="icon" class="h-12" />
@@ -47,7 +47,7 @@
         Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
         or
         <span
-          class="inline-block bg-gradient-to-r from-[#FF0069] to-[#5865F2] bg-clip-text text-transparent"
+          class="inline-block bg-linear-to-r/srgb from-[#FF0069] to-[#5865F2] bg-clip-text text-transparent"
           >@solunian</span> on Instagram or Discord.
       </p>
     </header>
@@ -226,6 +226,6 @@
 </div>
 
 <footer
-  class="flex flex-row justify-center bg-zinc-50 pb-4 pt-2 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
+  class="flex flex-row justify-center bg-zinc-50 pt-2 pb-4 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
   being alive.
 </footer>

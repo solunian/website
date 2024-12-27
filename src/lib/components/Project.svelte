@@ -69,7 +69,9 @@
   {/if}
 </div>
 
-<style lang="postcss">
+<style>
+  @import "tailwindcss/theme" theme(reference);
+
   #tooltip-target {
     @apply relative;
   }
@@ -77,12 +79,12 @@
   #tooltip::after {
     content: "";
     transform: translate(-50%, 170%);
-    @apply absolute left-1/2 top-0 z-10 block w-0 border-8 border-transparent border-t-black dark:border-t-yellow-400;
+    @apply absolute top-0 left-1/2 z-10 block w-0 border-8 border-transparent border-t-black dark:border-t-yellow-400;
   }
 
   #tooltip {
     /* transform: translate(-59%, -120%); */
-    @apply invisible absolute -left-12 -top-[36px] z-10 whitespace-nowrap rounded-md bg-black px-2 py-0.5 text-center text-white opacity-0 transition dark:bg-yellow-400 dark:text-black;
+    @apply invisible absolute -top-[36px] -left-12 z-10 rounded-md bg-black px-2 py-0.5 text-center whitespace-nowrap text-white opacity-0 transition dark:bg-yellow-400 dark:text-black;
   }
 
   #tooltip-target:hover > #tooltip {

@@ -43,18 +43,18 @@
   };
 </script>
 
-<dialog class="bg-transparent" bind:this={modal}>
+<dialog class="self-center justify-self-center bg-transparent" bind:this={modal}>
   {#if modal_open_idx !== -1}
     <button
       aria-label="background modal close"
-      class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
+      class="fixed top-0 left-0 -z-10 h-full w-full cursor-default"
       onclick={close_modal}
       tabindex="-1"
       transition:fade={{ duration: 200 }}></button>
 
     <button
       aria-label="x modal close"
-      class="absolute right-1 top-1 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
+      class="absolute top-1 right-1 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
       onclick={close_modal}
       transition:fade={{ duration: 200 }}>
       <svg
@@ -111,12 +111,14 @@
 {#if filenames.length > NUM_SHOWN}
   <div class="flex flex-row justify-center">
     <button
-      class="w-fit rounded border-2 border-zinc-200 px-2 transition hover:scale-105 hover:bg-zinc-200 dark:border-zinc-800 dark:hover:bg-zinc-800"
+      class="w-fit rounded-sm border-2 border-zinc-200 px-2 transition hover:scale-105 hover:bg-zinc-200 dark:border-zinc-800 dark:hover:bg-zinc-800"
       onclick={toggle_gallery}>{button_text}</button>
   </div>
 {/if}
 
 <style>
+  @import "tailwindcss/theme" theme(reference);
+
   ::backdrop {
     @apply bg-zinc-900 opacity-75;
   }

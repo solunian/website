@@ -144,7 +144,7 @@
 </div> -->
 
 <!-- WRAPPER FOR CENTERING -->
-<div class="flex flex-grow flex-row bg-zinc-200 lg:justify-center dark:bg-zinc-950">
+<div class="flex grow flex-row bg-zinc-200 lg:justify-center dark:bg-zinc-950">
   <div
     class="flex w-full flex-col border-x-2 border-zinc-300 bg-zinc-100 px-4 py-4 sm:mx-10 md:mx-20 md:px-8 lg:mx-0 lg:w-[60rem] dark:border-zinc-800 dark:bg-zinc-900">
     <header class="flex flex-col items-center sm:items-start">
@@ -208,7 +208,7 @@
           <button
             aria-label="refetch"
             onclick={fetch_data}
-            class="absolute right-1 top-0 translate-y-1 rounded-lg p-1 transition hover:bg-zinc-950/20">
+            class="absolute top-0 right-1 translate-y-1 rounded-lg p-1 transition hover:bg-zinc-950/20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -222,7 +222,7 @@
                 d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
             </svg>
           </button>
-          <div class="absolute bottom-2 right-2 font-sans text-4xl text-red-700">failed.</div>
+          <div class="absolute right-2 bottom-2 font-sans text-4xl text-red-700">failed.</div>
           <img src="/website/polite_cat.avif" alt="polite cat" class="w-96 rounded-xl" />
         </div>
       </div>
@@ -231,6 +231,6 @@
 </div>
 
 <footer
-  class="flex flex-row justify-center border-2 border-zinc-300 bg-zinc-200 pb-4 pt-2 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
+  class="flex flex-row justify-center border-2 border-zinc-300 bg-zinc-200 pt-2 pb-4 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
   <About />
 </footer>

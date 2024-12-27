@@ -54,16 +54,18 @@
       <div
         id="text"
         transition:slide
-        class="text-wrap rounded-lg bg-zinc-200 px-3 py-2 text-sm sm:px-5 sm:py-3 sm:text-base dark:bg-zinc-800">
+        class="rounded-lg bg-zinc-200 px-3 py-2 text-sm text-wrap sm:px-5 sm:py-3 sm:text-base dark:bg-zinc-800">
         {@html item.text}
       </div>
     {/if}
   </div>
 </div>
 
-<style lang="postcss">
+<style>
+  @import "tailwindcss/theme" theme(reference);
+
   #text :global(a) {
-    @apply whitespace-break-spaces break-all rounded text-black underline decoration-zinc-400 transition hover:bg-zinc-300 dark:text-white dark:decoration-zinc-500 dark:hover:bg-zinc-700;
+    @apply rounded break-all whitespace-break-spaces text-black underline decoration-zinc-400 transition hover:bg-zinc-300 dark:text-white dark:decoration-zinc-500 dark:hover:bg-zinc-700;
   }
 
   #text :global(p) {
