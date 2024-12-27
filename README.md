@@ -6,9 +6,12 @@
 - migrate to tailwindcss v4 had some weird things
   - instead of `lang="postcss"`, there's a `@import "tailwindcss/theme" theme(reference);`
     at the top right under the starting style tag
-  - mouse-grab default was removed from base layer of tailwind??? idk if its a beta bug or not, added in the `src/app.css` base layer
-  - modals (dialog tags) were no longer centered??? added that back with classes "self-center justify-self-center" in dialog tag
-  - gradient was being weird with OKLCH color space so changed back to srgb in main page for `@solunian` text -> `bg-linear-to-r/srgb`
+  - mouse-pointer default was removed from base layer for buttons??? idk if its a beta bug or not, added in the `src/app.css` button base layer
+  - modals (dialog tags) were no longer centered???
+    - ~~classes "self-center justify-self-center" in dialog tag only worked on chrome~~
+    - did some weird absolute positioning with left, top, and translate idk i just searched it up and fiddled around
+    - im going to sleep. this was dumb.
+  - gradient looked a little weird/washed out with OKLCH color space so changed back to srgb in main page for `@solunian` text -> `bg-linear-to-r/srgb`
 
 ### Old Notes
 

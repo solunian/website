@@ -4,7 +4,7 @@
 
 @theme {
   --font-*: initial;
-  --font-serif: "Lora", "serif";
+  --font-serif: "Lora", "sans-serif";
   --font-sans: "Lexend", "sans-serif";
   --font-mono: "Nova Mono", "monospace";
 }
@@ -36,6 +36,6 @@
 
   /* this style was removed from the base tailwind styles??? */
   button {
-    @apply cursor-grab;
+    @apply cursor-pointer;
   }
 }
