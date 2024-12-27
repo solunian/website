@@ -1,8 +1,12 @@
 <script lang="ts">
   import Link from "$lib/components/Link.svelte";
 
-  export let title: string | undefined;
-  export let url: string | undefined;
+  interface Props {
+    title?: string;
+    url?: string;
+  }
+
+  let { title, url }: Props = $props();
 
   const def = (val: string | undefined) => val !== undefined;
 </script>

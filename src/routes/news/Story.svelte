@@ -5,12 +5,16 @@
   import Link from "$lib/components/Link.svelte";
   import type { Item } from "./types";
 
-  export let item: Item;
-  export let index: number;
+  interface Props {
+    item: Item;
+    index: number;
+  }
+
+  let { item, index }: Props = $props();
 
   const def = (val: number | string | undefined) => val !== undefined;
 
-  let is_text_open = false;
+  let is_text_open = $state(false);
 </script>
 
 <div class="flex flex-row p-1">
@@ -20,7 +24,7 @@
       <Title title={item.title} url={item.url} />
 
       {#if def(item.text)}
-        <button class="font-mono text-green-600" on:click={() => (is_text_open = !is_text_open)}
+        <button class="font-mono text-green-600" onclick={() => (is_text_open = !is_text_open)}
           >{"<text>"}</button>
       {/if}
     </div>

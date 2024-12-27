@@ -1,10 +1,14 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
 
-  export let farleft: MouseEventHandler<HTMLButtonElement>;
-  export let left: MouseEventHandler<HTMLButtonElement>;
-  export let right: MouseEventHandler<HTMLButtonElement>;
-  export let farright: MouseEventHandler<HTMLButtonElement>;
+  interface Props {
+    farleft: MouseEventHandler<HTMLButtonElement>;
+    left: MouseEventHandler<HTMLButtonElement>;
+    right: MouseEventHandler<HTMLButtonElement>;
+    farright: MouseEventHandler<HTMLButtonElement>;
+  }
+
+  let { farleft, left, right, farright }: Props = $props();
 </script>
 
 <div class="flex flex-row justify-center">
@@ -13,7 +17,7 @@
     <button
       aria-label="farleft"
       class="rounded-l-3xl border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
-      on:click={farleft}>
+      onclick={farleft}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -30,7 +34,7 @@
     <button
       aria-label="left"
       class=" border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
-      on:click={left}>
+      onclick={left}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -44,7 +48,7 @@
     <button
       aria-label="right"
       class="border-r-2 border-zinc-300 px-3 py-1 transition hover:bg-zinc-200 group-hover:border-zinc-400 dark:border-zinc-800 hover:dark:bg-zinc-800 group-hover:dark:border-zinc-700"
-      on:click={right}>
+      onclick={right}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -58,7 +62,7 @@
     <button
       aria-label="farright"
       class="rounded-r-3xl px-3 py-1 transition hover:bg-zinc-200 hover:dark:bg-zinc-800"
-      on:click={farright}>
+      onclick={farright}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

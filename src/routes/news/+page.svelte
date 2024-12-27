@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import type { ItemID, Item } from "./types";
   import Story from "./Story.svelte";
   import Select from "./Select.svelte";
@@ -15,27 +14,26 @@
     Failed,
   }
 
-  let fetch_status: Status = Status.Loading;
-  let item_list: Item[] = [];
+  let fetch_status: Status = $state(Status.Loading);
+  let item_list: Item[] = $state([]);
   let last_fetch_moment = moment();
-  let last_fetch_timestamp: string =
-    last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow();
+  let last_fetch_timestamp: string = $state(
+    last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow()
+  );
   const update_timestamp = () =>
     (last_fetch_timestamp =
       last_fetch_moment.format("MMM Do, YYYY ~ ") + last_fetch_moment.fromNow());
 
   let filter_values = ["top", "best", "new"];
-  let filter: string = filter_values[0]; // global variable basically
+  let filter: string = $state(filter_values[0]); // global variable basically
 
-  $: {
-    filter; // trigger reactivity
+  $effect(() => {
     fetch_data();
-  }
-
+  });
   // updating timestamp every second even though it won't change that much lol
   setInterval(update_timestamp, 1000);
 
-  let item_list_start = 0; // inclusive
+  let item_list_start = $state(0); // inclusive
   let item_list_end = 30; // exclusive
   let item_id_list: ItemID[];
   const update_item_list = async (offset: number) => {
@@ -116,10 +114,6 @@
       fetch_status = Status.Failed;
     }
   };
-
-  onMount(() => {
-    fetch_data();
-  });
 </script>
 
 <svelte:head>
@@ -157,7 +151,7 @@
       <div class="flex flex-row items-baseline gap-4 sm:gap-20">
         <nav class="flex flex-row items-baseline gap-4">
           <Link href="/">home</Link>
-          <button on:click={fetch_data}><Link>refetch</Link></button>
+          <button onclick={fetch_data}><Link>refetch</Link></button>
           <Link href="https://news.ycombinator.com">origin</Link>
         </nav>
 
@@ -213,7 +207,7 @@
         <div class="relative">
           <button
             aria-label="refetch"
-            on:click={fetch_data}
+            onclick={fetch_data}
             class="absolute right-1 top-0 translate-y-1 rounded-lg p-1 transition hover:bg-zinc-950/20">
             <svg
               xmlns="http://www.w3.org/2000/svg"

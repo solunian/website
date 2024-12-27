@@ -15,7 +15,7 @@
   <button
     aria-label="background modal close"
     class="fixed left-0 top-0 -z-10 h-full w-full cursor-default"
-    on:click={close}
+    onclick={close}
     tabindex="-1"
     transition:fade={{ duration: 200 }}></button>
 
@@ -24,7 +24,7 @@
     <button
       aria-label="x modal close"
       class="absolute right-2 top-2 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
-      on:click={close}
+      onclick={close}
       transition:fade={{ duration: 200 }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@
   </div>
 </dialog>
 
-<button on:click={open}>about.</button>
+<button onclick={open}>about.</button>
 
 <style>
   ::backdrop {

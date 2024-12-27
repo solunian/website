@@ -1,10 +1,16 @@
 <script lang="ts">
+  import type { Snippet } from "svelte";
   import Link from "./Link.svelte";
 
-  export let title: string;
-  export let link: string | undefined = undefined;
-  export let github_link: string | undefined = undefined;
-  export let starred: boolean = false;
+  interface Props {
+    title: string;
+    link?: string;
+    github_link?: string;
+    starred?: boolean;
+    children?: Snippet;
+  }
+
+  let { title, link, github_link, starred = false, children }: Props = $props();
 </script>
 
 <div>
@@ -39,7 +45,7 @@
     {/if}
   </h3>
 
-  <slot />
+  {@render children?.()}
 
   {#if github_link !== undefined}
     <a

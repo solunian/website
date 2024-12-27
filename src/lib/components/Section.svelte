@@ -1,6 +1,13 @@
 <script lang="ts">
-  export let id: string;
-  export let name: string | null = null;
+  import type { Snippet } from "svelte";
+
+  interface Props {
+    id: string;
+    name?: string;
+    children?: Snippet;
+  }
+
+  let { id, name, children }: Props = $props();
 
   const rainbow_colors: string[] = [
     "text-red-500",
@@ -11,7 +18,7 @@
     "text-indigo-500",
     "text-violet-500",
   ];
-  let color_idx = Math.floor(Math.random() * rainbow_colors.length);
+  let color_idx = $state(Math.floor(Math.random() * rainbow_colors.length));
 
   setInterval(() => color_idx++, 100);
 </script>
@@ -26,6 +33,6 @@
   </div>
 
   <div class="flex flex-col gap-4 pl-2">
-    <slot />
+    {@render children?.()}
   </div>
 </section>
