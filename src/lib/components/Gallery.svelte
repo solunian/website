@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
-
   const NUM_SHOWN: number = 6;
 
   interface Props {
@@ -40,24 +38,23 @@
   };
   const close_modal = () => {
     modal.close();
+    modal_open_idx = -1;
   };
 </script>
 
-<dialog class="h-full w-full bg-transparent" bind:this={modal}>
+<dialog class="group h-full w-full bg-transparent" bind:this={modal}>
   {#if modal_open_idx !== -1}
     <button
       aria-label="background modal close"
       class="fixed top-0 left-0 h-full w-full cursor-default"
       onclick={close_modal}
-      tabindex="-1"
-      transition:fade={{ duration: 200 }}></button>
+      tabindex="-1"></button>
 
     <div class="absolute top-1/2 left-1/2 -translate-1/2">
       <button
         aria-label="x modal close"
         class="absolute top-1 right-1 z-10 stroke-zinc-900 opacity-50 transition hover:opacity-75"
-        onclick={close_modal}
-        transition:fade={{ duration: 200 }}>
+        onclick={close_modal}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,7 +67,6 @@
       </button>
 
       <img
-        transition:fade={{ duration: 200 }}
         src={`/${folder}/${filenames[modal_open_idx]}`}
         alt={filenames[modal_open_idx].split(".")[0].replaceAll("_", " ")}
         class={`max-h-[75vh] max-w-[75vw] rounded-xl md:max-w-[50vw] ${
