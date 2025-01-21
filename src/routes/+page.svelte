@@ -53,25 +53,36 @@
     </header>
 
     <Section id="projects">
+      <Project title="clap-mc" github_link="https://github.com/solunian/clap-mc">
+        Media controller for a computer's audio/video playback by detecting claps. For SBHacks XI.
+      </Project>
+
+      <Project title="identicon" github_link="https://github.com/solunian/identicon">
+        Incredibly simple identicon generator in Rust. Playing around with pixel-based art from
+        seeded hash data.
+      </Project>
+
       <Project
         title="lua-docs"
         link="https://lua-docs.vercel.app/"
         github_link="https://github.com/solunian/lua-docs">
         Aesthetic documentation for the coolest scripting language!
       </Project>
+
       <Project
         title="countdown"
         link="https://countdowning.vercel.app/"
         github_link="https://github.com/solunian/countdown">
-        A pretty clean and pretty scuffed countdown generator for deadlines and timers. Just a kinda
-        meh project with spaghetti code made over a weekend.
+        A pretty clean and messily written countdown generator for deadlines and timers. Just a
+        kinda half-baked project made over a weekend.
       </Project>
+
       <Project
         title="Daniel's Hacker News"
         link="/news"
         github_link="https://github.com/solunian/website/tree/main/src/routes/news"
         starred>
-        An aesthetic wrapper for Y Combinator's Hacker News. Just a nice way to check out tech news.
+        Aesthetic wrapper for Y Combinator's Hacker News. Just a nice way to check out tech news.
       </Project>
 
       <Project title="Personal Website" link="/" github_link="https://github.com/solunian/website">
@@ -91,8 +102,9 @@
         title="jazzboard"
         link="https://jazzboard.vercel.app/"
         github_link="https://github.com/solunian/jazzboard">
-        A painfully terrible way to play jazz piano lead sheets on a computer keyboard. Prototyped
-        at Hack Club's <Link href="https://outernet.hackclub.com">Outernet</Link>!
+        A hacky way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
+          href="https://outernet.hackclub.com">Outernet</Link
+        >!
       </Project>
 
       <Project
@@ -109,7 +121,7 @@
         link="https://chs-map.vercel.app/"
         github_link="https://github.com/solunian/chs-map"
         starred>
-        An interactive map for Cupertino High School to help students navigate around campus.
+        Interactive map for Cupertino High School to help students navigate around campus.
       </Project>
 
       <Project
@@ -124,7 +136,7 @@
         title="LifeLink"
         link="https://lifelink-eta.vercel.app/"
         github_link="https://github.com/solunian/lifelink">
-        Digital medical IDs for emergencies. 3rd place at Corpus Hacks 2023!
+        Digital medical IDs for emergencies. 3rd place at Corpus Hacks 2023.
       </Project>
 
       <Project
@@ -158,7 +170,7 @@
       </Project>
 
       <Project title="Mute Ads on Spotify" github_link="https://github.com/solunian/mute-ads">
-        A tool to mute ads on Spotify through the computer's volume using the API and some simple
+        Tool to mute ads on Spotify through the computer's volume using the API and some simple
         audio manipulation with Python.
       </Project>
     </Section>
