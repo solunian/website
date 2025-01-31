@@ -222,6 +222,7 @@
       <Gallery
         folder="pixel-art"
         filenames={[
+          "storke_tower.png",
           "rick_astley.png",
           "shine_pfp.png",
           "worst_intersection.png",
