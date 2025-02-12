@@ -93,7 +93,7 @@
       <Project
         title="unimash"
         link="https://unimash.vercel.app/"
-        github_link="https://github.com/solunian/website">
+        github_link="https://github.com/solunian/unimash">
         A joke website replicating FaceMash for "uni"-versities. Just some fun with MongoDB,
         SvelteKit's form actions, and chess rating systems.
       </Project>
