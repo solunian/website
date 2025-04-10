@@ -3,6 +3,31 @@
   import Project from "$lib/components/Project.svelte";
   import Section from "$lib/components/Section.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
+
+  const footer_texts = [
+    "being alive.",
+    "stay determined!",
+    "life is hard.",
+    "why, hello there!",
+    "can't we be kind.",
+    "hacking into the mainframe.",
+    "never gonna give you up.",
+    "winter is coming.",
+    "is love dead.",
+    "where are we?",
+    "what are we doing?",
+    "how can we live?",
+    "are we happy?",
+    "hello world.",
+    "did we love enough.",
+    "is this our maybe happy ending.",
+    "where to now.",
+    "defying entropy.",
+    "wait for me.",
+    "all things die.",
+    "how much can your heart take.",
+    "how could the world be?",
+  ];
 </script>
 
 <svelte:head>
@@ -250,5 +275,5 @@
 
 <footer
   class="flex flex-row justify-center bg-zinc-50 pt-2 pb-4 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
-  being alive.
+  {footer_texts[Math.floor(Math.random() * footer_texts.length)]}
 </footer>
