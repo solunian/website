@@ -30,13 +30,14 @@
         <Link href="#pixel-art">[pixel art]</Link>. Feel free to check out my work below!
       </p>
 
+      <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
+
+      <p>Right now, I'm busy living my life.</p>
+
       <p>
-        Right now, I'm working on
-        <Link href="https://github.com/solunian/two-colors">
-          <b class="font-medium">two-colors</b></Link
-        >, a game to treat amblyopia. I'm also planning to make <Link
-          href="https://github.com/solunian/paperplane"><b class="font-medium">paperplane</b></Link
-        >, a text editor/format for enjoyable writing, and
+        I'm planning to make <Link href="https://github.com/solunian/paperplane"
+          ><b class="font-medium">paperplane</b></Link
+        >, a text editor/format for creative writing, and
         <Link href="https://github.com/solunian/tart"><b class="font-medium">tart</b></Link>, a
         simple project management tool. More on my <Link href="https://github.com/solunian"
           ><span class="text-green-600">GitHub</span></Link
@@ -53,6 +54,15 @@
     </header>
 
     <Section id="projects">
+      <Project
+        title="two-colors"
+        link="https://solunian.itch.io/two-colors"
+        github_link="https://github.com/solunian/two-colors"
+        starred>
+        Game to treat amblyopia (lazy eye) through minigames while wearing color-tinted 3D glasses;
+        built with the LÖVE game engine in Lua. Still a rough demo.
+      </Project>
+
       <Project title="clap-mc" github_link="https://github.com/solunian/clap-mc">
         Media controller for a computer's audio/video playback by detecting claps. For SBHacks XI.
       </Project>
@@ -100,8 +110,9 @@
 
       <Project
         title="jazzboard"
-        link="https://jazzboard.vercel.app/"
-        github_link="https://github.com/solunian/jazzboard">
+        link="https://jazzboard-solunian.vercel.app/"
+        github_link="https://github.com/solunian/jazzboard"
+        starred>
         A hacky way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
           href="https://outernet.hackclub.com">Outernet</Link
         >!
@@ -164,9 +175,8 @@
         title="dripdrop"
         link="https://dripdrop-two.vercel.app/"
         github_link="https://github.com/solunian/dripdrop">
-        "The next-gen water source." A website to test basic
-        <Link href="https://www.react-spring.dev/">react-spring</Link>
-        animations and dark mode with <Link href="https://tailwindcss.com/">tailwindcss</Link>.
+        "The next-gen water source." A website to test basic react-spring animations and dark mode
+        with tailwindcss.
       </Project>
 
       <Project title="Mute Ads on Spotify" github_link="https://github.com/solunian/mute-ads">
@@ -190,7 +200,6 @@
           "rishi.jpg",
           "annie.jpg",
           "shine.jpg",
-          "sophie.jpg",
           "lincoln_skull.jpg",
           "orchids.jpg",
           "daniels_hand.jpg",
