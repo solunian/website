@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-  <title>Daniel Cui</title>
+  <title>Daniel Cui • solunian.dev</title>
 </svelte:head>
 
 <div class="flex w-full flex-row lg:justify-center">
