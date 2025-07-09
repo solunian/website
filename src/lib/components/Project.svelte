@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import Link from "./Link.svelte";
+  import Link from "./link.svelte";
 
   interface Props {
     title: string;
@@ -70,7 +70,7 @@
 </div>
 
 <style>
-  @import "tailwindcss/theme" theme(reference);
+  @import "tailwindcss/theme";
 
   #tooltip-target {
     @apply relative;

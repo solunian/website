@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { ItemID, Item } from "./types";
-  import Story from "./Story.svelte";
-  import Select from "./Select.svelte";
-  import Link from "$lib/components/Link.svelte";
+  import Story from "./story.svelte";
+  import Select from "./select.svelte";
+  import Link from "$lib/components/link.svelte";
   import moment from "moment";
   import { fade } from "svelte/transition";
-  import About from "./About.svelte";
-  import FeedNavigation from "./FeedNavigation.svelte";
+  import About from "./about.svelte";
+  import FeedNavigation from "./feed-navigation.svelte";
 
   enum Status {
     Loading,

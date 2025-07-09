@@ -1,8 +1,8 @@
 <script>
-  import Link from "$lib/components/Link.svelte";
-  import Project from "$lib/components/Project.svelte";
-  import Section from "$lib/components/Section.svelte";
-  import Gallery from "$lib/components/Gallery.svelte";
+  import Link from "$lib/components/link.svelte";
+  import Project from "$lib/components/project.svelte";
+  import Section from "$lib/components/section.svelte";
+  import Gallery from "$lib/components/gallery.svelte";
 
   const footer_texts = [
     "being alive.",

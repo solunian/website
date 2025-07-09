@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
-  import Link from "$lib/components/Link.svelte";
+  import Link from "$lib/components/link.svelte";
 </script>
 
 <svelte:head>

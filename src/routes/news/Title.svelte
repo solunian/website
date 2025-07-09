@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Link from "$lib/components/Link.svelte";
+  import Link from "$lib/components/link.svelte";
 
   interface Props {
     title?: string;

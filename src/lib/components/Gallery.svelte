@@ -115,9 +115,9 @@
 {/if}
 
 <style>
-  @import "tailwindcss/theme" theme(reference);
+  @import "tailwindcss/theme";
 
   ::backdrop {
-    @apply bg-zinc-900 opacity-75;
+    @apply bg-zinc-900/75;
   }
 </style>

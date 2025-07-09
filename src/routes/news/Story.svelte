@@ -1,8 +1,8 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import moment from "moment";
-  import Title from "./Title.svelte";
-  import Link from "$lib/components/Link.svelte";
+  import Title from "./title.svelte";
+  import Link from "$lib/components/link.svelte";
   import type { Item } from "./types";
 
   interface Props {
@@ -62,7 +62,7 @@
 </div>
 
 <style>
-  @import "tailwindcss/theme" theme(reference);
+  @import "tailwindcss/theme";
 
   #text :global(a) {
     @apply rounded break-all whitespace-break-spaces text-black underline decoration-zinc-400 transition hover:bg-zinc-300 dark:text-white dark:decoration-zinc-500 dark:hover:bg-zinc-700;
