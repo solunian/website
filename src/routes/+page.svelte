@@ -57,9 +57,13 @@
 
       <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
 
-      <p>Right now, I'm busy living my life.</p>
-
       <p>
+        Right now, I'm busy living my life. You can find most of my coding work on my <Link
+          href="https://github.com/solunian"><span class="text-green-600">GitHub</span></Link
+        >!
+      </p>
+
+      <!-- <p>
         I'm planning to make <Link href="https://github.com/solunian/paperplane"
           ><b class="font-medium">paperplane</b></Link
         >, a text editor/format for creative writing, and
@@ -67,7 +71,7 @@
         simple project management tool. More on my <Link href="https://github.com/solunian"
           ><span class="text-green-600">GitHub</span></Link
         >!
-      </p>
+      </p> -->
 
       <p>
         Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
