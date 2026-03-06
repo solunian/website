@@ -34,7 +34,7 @@
         <span class="text-[#5865F2]">@solunian</span> on Discord.
       </p>
 
-      <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
+      <hr class="rounded-full border border-zinc-300 dark:border-zinc-700" />
 
       <div>
         <Link href="#projects">[#projects]</Link>
@@ -109,8 +109,7 @@
       <Project
         title="jazzboard"
         link="https://jazzboard-solunian.vercel.app/"
-        github_link="https://github.com/solunian/jazzboard"
-        starred>
+        github_link="https://github.com/solunian/jazzboard">
         A hacky way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
           href="https://outernet.hackclub.com">Outernet</Link
         >!
@@ -128,8 +127,7 @@
       <Project
         title="CHS Map"
         link="https://chs-map.vercel.app/"
-        github_link="https://github.com/solunian/chs-map"
-        starred>
+        github_link="https://github.com/solunian/chs-map">
         Interactive map for Cupertino High School to help students navigate around campus.
       </Project>
 
@@ -213,12 +211,12 @@
         </p>
 
         <p>
-          <b>celsius.</b> 0 is freezing point, 100 is boiling point for water. For all the fahrenheit
+          <b>Celsius.</b> 0 is freezing point, 100 is boiling point for water. For all the fahrenheit
           fanatics out there, I get that you *think* it's intuitive, but just strip away all the ingrained
-          emotion of familiarity. Why is 32 the freezing point and 212 the boiling point? Sure, you have
-          more precision with integer values but can people even tell the difference of one degree fahrenheit?
-          (also you can put a decimal point for celsius) If this is just an arbitrary measure to know
-          temperature, can't we gain an intuition for both?
+          emotions of familiarity. Why is 32 the freezing point and 212 the boiling point? Sure, you
+          have more precision with integer values but can people even tell the difference of one degree
+          fahrenheit? (also you can put a decimal point for celsius) If this is just an arbitrary measure
+          to know temperature, can't we gain an intuition for both?
         </p>
 
         <p>Now I bet you are so convinced to become unit fluent so here is what you can do:</p>

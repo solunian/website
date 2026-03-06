@@ -27,7 +27,7 @@
     <div
       transition:slide={{ duration: 200 }}
       class="flex w-full max-w-full flex-col gap-6 px-4 pb-4">
-      <hr transition:fade class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
+      <hr transition:fade class="rounded-full border border-zinc-300 dark:border-zinc-700" />
       {@render children()}
     </div>
   {/if}

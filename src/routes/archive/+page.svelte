@@ -27,7 +27,7 @@
         media, whether it be pixels or vectors or carbon dust.
       </p>
 
-      <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
+      <hr class="rounded-full border border-zinc-300 dark:border-zinc-700" />
 
       <div>
         <Link href="/">[..]</Link>

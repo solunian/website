@@ -8,7 +8,9 @@
 
   let { href, children }: Props = $props();
 
-  const target: string = href?.startsWith("#") || href?.startsWith("/") ? "_self" : "_blank";
+  let target: string = $derived(
+    href?.startsWith("#") || href?.startsWith("/") ? "_self" : "_blank"
+  );
   const def = (val: string | undefined) => val !== undefined;
 </script>
 
