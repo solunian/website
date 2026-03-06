@@ -2,32 +2,8 @@
   import Link from "$lib/components/link.svelte";
   import Project from "$lib/components/project.svelte";
   import Section from "$lib/components/section.svelte";
-  import Gallery from "$lib/components/gallery.svelte";
-
-  const footer_texts = [
-    "being alive.",
-    "stay determined!",
-    "life is hard.",
-    "why, hello there!",
-    "can't we be kind.",
-    "hacking into the mainframe.",
-    "never gonna give you up.",
-    "winter is coming.",
-    "is love dead.",
-    "where are we?",
-    "what are we doing?",
-    "how can we live?",
-    "are we happy?",
-    "hello world.",
-    "did we love enough.",
-    "is this our maybe happy ending.",
-    "where to now.",
-    "defying entropy.",
-    "wait for me.",
-    "all things die.",
-    "how much can your heart take.",
-    "how could the world be?",
-  ];
+  import Footer from "$lib/components/footer.svelte";
+  import Article from "$lib/components/article.svelte";
 </script>
 
 <svelte:head>
@@ -38,10 +14,13 @@
   <div
     class="flex max-w-5xl flex-col gap-4 px-6 pt-4 pb-8 sm:gap-8 sm:px-12 sm:pt-6 sm:pb-10 md:px-20 md:pt-10 md:pb-12">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
-      <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
-        <img src="/website/icon.avif" alt="icon" class="h-12" />
+      <div class="mb-4 flex flex-row items-center gap-4 sm:gap-6">
+        <img src="/website/icon.avif" alt="icon" class="inline h-12" />
 
-        <h1 class="font-lexend text-4xl font-medium text-black dark:text-white">Daniel Cui</h1>
+        <h1
+          class="font-lexend text-3xl font-medium text-wrap text-black sm:text-4xl dark:text-white">
+          Daniel Cui
+        </h1>
       </div>
 
       <p>
@@ -50,36 +29,26 @@
       </p>
 
       <p>
-        I enjoy creating <Link href="#projects">[cool things]</Link> with code,
-        <Link href="#sketches">[sketching]</Link>, and making
-        <Link href="#pixel-art">[pixel art]</Link>. Feel free to check out my work below!
-      </p>
-
-      <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
-
-      <p>
-        Right now, I'm busy living my life. You can find most of my coding work on my <Link
-          href="https://github.com/solunian"><span class="text-green-600">GitHub</span></Link
-        >!
-      </p>
-
-      <!-- <p>
-        I'm planning to make <Link href="https://github.com/solunian/paperplane"
-          ><b class="font-medium">paperplane</b></Link
-        >, a text editor/format for creative writing, and
-        <Link href="https://github.com/solunian/tart"><b class="font-medium">tart</b></Link>, a
-        simple project management tool. More on my <Link href="https://github.com/solunian"
-          ><span class="text-green-600">GitHub</span></Link
-        >!
-      </p> -->
-
-      <p>
         Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
         or
-        <span
-          class="inline-block bg-linear-to-r/srgb from-[#FF0069] to-[#5865F2] bg-clip-text text-transparent"
-          >@solunian</span> on Instagram or Discord.
+        <span class="text-[#5865F2]">@solunian</span> on Discord.
       </p>
+
+      <hr class="rounded-full border border-zinc-300 dark:border-zinc-700" />
+
+      <div>
+        <Link href="#projects">[#projects]</Link>
+        <Link href="#thoughts">[#thoughts]</Link>
+        <Link href="/news">[/news]</Link>
+        <Link href="/archive">[/archive]</Link>
+        <Link href="https://github.com/solunian"
+          >[<span class="text-green-600">{">github"}</span>]</Link>
+        <Link href="https://instagram.com/solunian"
+          >[<span
+            class="bg-linear-to-r from-[#FFD600] via-[#FF0069] to-[#7638FA] bg-clip-text text-transparent"
+            >{">instagram"}</span
+          >]</Link>
+      </div>
     </header>
 
     <Section id="projects">
@@ -110,7 +79,7 @@
 
       <Project
         title="countdown"
-        link="https://countdowning.vercel.app/"
+        link="https://countdown.solunian.dev"
         github_link="https://github.com/solunian/countdown">
         A pretty clean and messily written countdown generator for deadlines and timers. Just a
         kinda half-baked project made over a weekend.
@@ -140,8 +109,7 @@
       <Project
         title="jazzboard"
         link="https://jazzboard-solunian.vercel.app/"
-        github_link="https://github.com/solunian/jazzboard"
-        starred>
+        github_link="https://github.com/solunian/jazzboard">
         A hacky way to play jazz piano lead sheets on a computer keyboard. Prototyped at Hack Club's <Link
           href="https://outernet.hackclub.com">Outernet</Link
         >!
@@ -159,8 +127,7 @@
       <Project
         title="CHS Map"
         link="https://chs-map.vercel.app/"
-        github_link="https://github.com/solunian/chs-map"
-        starred>
+        github_link="https://github.com/solunian/chs-map">
         Interactive map for Cupertino High School to help students navigate around campus.
       </Project>
 
@@ -214,58 +181,87 @@
       </Project>
     </Section>
 
-    <Section id="sketches">
-      <Gallery
-        folder="sketches"
-        grayscale
-        filenames={[
-          "iris.jpg",
-          "vishnu.jpg",
-          "ishaan.jpg",
-          "angela.jpg",
-          "sunny.jpg",
-          "justin_avy.jpg",
-          "susan.jpg",
-          "rishi.jpg",
-          "annie.jpg",
-          "shine.jpg",
-          "lincoln_skull.jpg",
-          "orchids.jpg",
-          "daniels_hand.jpg",
-          "shreyan.jpg",
-          "sanias_bottle.jpg",
-          "rose.jpg",
-          "apple.jpg",
-          "tiffany.jpg",
-          "book_talk_big_three.jpg",
-          "arnav.jpg",
-          "alicia.jpg",
-          "avy.jpg",
-          "elaine.jpg",
-          "ajay.jpg",
-          "kitten.jpg",
-          "little_bird.jpg",
-          "owl.jpg",
-          "phoenix.jpg",
-          "christmas_hat_bird.jpg",
-          "porg.jpg",
-          "panda.jpg",
-          "tiger.jpg",
-          "wolf.jpg",
-          "seagull.jpg",
-        ]} />
-    </Section>
+    <Section id="thoughts">
+      <Article title="Use the Metric System">
+        <p>
+          For Americans (such as myself), I understand the reluctance to use something unfamiliar in
+          every day life; however, there are too many good reasons to immerse yourself in the metric
+          system.
+        </p>
 
-    <Section id="pixel-art" name="pixel art">
-      <Gallery
-        folder="pixel-art"
-        filenames={[
-          "storke_tower.png",
-          "rick_astley.png",
-          "shine_pfp.png",
-          "worst_intersection.png",
-          "creekside.png",
-        ]} />
+        <p>
+          <b>Majority of the world uses it.</b> So it is good for international traveling, conversing
+          with people from outside the country, and keeping in touch with a more globally connected world.
+        </p>
+
+        <p>
+          <b>Cooking with precise measurements.</b> Using tbsp, tsp, cups, gallons, etc. is often time
+          consuming and leaves many measuring utensils dirty. Using a scale provides more accurate measurements
+          of weight (not volume) for whatever you need to cook.
+        </p>
+
+        <p>
+          <b>Conversion and visualization are easier</b> for distance/length (meter), volume (liter),
+          weight/mass (gram). With its consistent prefixes as powers of ten onto base units, conversions
+          can simply be done by moving the decimal point. Traveling one kilometer can be easily broken
+          down to 1000 meters, and one liter of water will weight one kilogram. There will be no need
+          to know 5280 feet to one mile, or the difference between fluid ounces and weight ounces, or
+          any other arbitrary, non-base-10 divisions for units of 3, 8, 12, 16, ... but no more! Metric
+          is literally the basis for all modern science standardizations because it is simple and consistent.
+        </p>
+
+        <p>
+          <b>Celsius.</b> 0 is freezing point, 100 is boiling point for water. For all the fahrenheit
+          fanatics out there, I get that you *think* it's intuitive, but just strip away all the ingrained
+          emotions of familiarity. Why is 32 the freezing point and 212 the boiling point? Sure, you
+          have more precision with integer values but can people even tell the difference of one degree
+          fahrenheit? (also you can put a decimal point for celsius) If this is just an arbitrary measure
+          to know temperature, can't we gain an intuition for both?
+        </p>
+
+        <p>Now I bet you are so convinced to become unit fluent so here is what you can do:</p>
+        <ul class="list-disc pl-6">
+          <li>Convert weather/thermostat temperatures to celsius. (c * 1.8 + 32 = f)</li>
+          <li>Convert fitness tracking distance to kilometers. (1.6 * km = mi)</li>
+          <li>Get a cooking scale that uses grams.</li>
+          <li>Use kilograms for body weight and meters/cm for height.</li>
+        </ul>
+
+        <p>
+          And that's pretty much it! Gradually, you will be able to understand both systems easily;
+          e.g. I will understand when my friend says it is 68 degrees out while my phone tells me
+          20. To anyone who appreciates simplicity and well-defined standards, you should make this
+          switch.
+        </p>
+      </Article>
+
+      <Article title="24-Hour Time and yyyy-mm-dd Date">
+        <p>
+          24-hour time is less confusing than 12 hours with am/pm for any kind of scheduling; the
+          hour number gives the exact hour of the day you are currently at. 1 pm actually means 13
+          hours of the day has passed. You still use the same number of digits, just simply without
+          an extra am/pm value. There would be no confusion of 12 am vs. 12 pm as it would be 00:00
+          and 12:00, which is a much more understandable difference.
+        </p>
+
+        <p>
+          Writing the date should follow numerical ordering, not speech order. I am preferring
+          year-month-day because the order can continue in a satisfying decreasing significance with
+          hour coming after day, minute after hour, and so on. (yyyy-mm-dd hh:mm:ss: ...) Also in
+          English, the mm-dd part can still be easily read in the spoken order like 01-13 being Jan
+          13th.
+        </p>
+      </Article>
+
+      <Article title="snake_case > PascalCase > camelCase">
+        <p>
+          snake_case is simple: replace all spaces with underscores, and FULL_CAPS for constants is
+          easy. It is also very readable. The other ones are less appealing as some file systems
+          differ in case-sensitivity and squishing words together can get messy. For urls and domain
+          names where underscores are discouraged or not allowed, you should use kebab-case (snake
+          case with hyphens).
+        </p>
+      </Article>
     </Section>
 
     <!-- <Section id="stories">
@@ -277,7 +273,4 @@
   </div>
 </div>
 
-<footer
-  class="flex flex-row justify-center bg-zinc-50 pt-2 pb-4 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
-  {footer_texts[Math.floor(Math.random() * footer_texts.length)]}
-</footer>
+<Footer />
