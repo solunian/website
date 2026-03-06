@@ -24,6 +24,6 @@
 </script>
 
 <footer
-  class="flex flex-row justify-center border-t-2 border-zinc-200 bg-zinc-50 pt-2 pb-4 font-mono text-zinc-300 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
+  class="flex flex-row justify-center border-t-2 border-zinc-200 bg-zinc-100 pt-2 pb-4 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
   {footer_texts[Math.floor(Math.random() * footer_texts.length)]}
 </footer>

@@ -4,15 +4,11 @@
   // vercel analytics snippet
   import { dev } from "$app/environment";
   import { inject } from "@vercel/analytics";
-  import type { Snippet } from "svelte";
+  import type { LayoutProps } from "./$types";
 
-  interface Props {
-    children?: Snippet;
-  }
-
-  let { children }: Props = $props();
+  let { children }: LayoutProps = $props();
 
   inject({ mode: dev ? "development" : "production" }); // for vercel analytics
 </script>
 
-{@render children?.()}
+{@render children()}

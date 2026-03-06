@@ -3,6 +3,7 @@
   import Project from "$lib/components/project.svelte";
   import Section from "$lib/components/section.svelte";
   import Footer from "$lib/components/footer.svelte";
+  import Article from "$lib/components/article.svelte";
 </script>
 
 <svelte:head>
@@ -13,10 +14,13 @@
   <div
     class="flex max-w-5xl flex-col gap-4 px-6 pt-4 pb-8 sm:gap-8 sm:px-12 sm:pt-6 sm:pb-10 md:px-20 md:pt-10 md:pb-12">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
-      <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
-        <img src="/website/icon.avif" alt="icon" class="h-12" />
+      <div class="mb-4 flex flex-row items-center gap-4 sm:gap-6">
+        <img src="/website/icon.avif" alt="icon" class="inline h-12" />
 
-        <h1 class="font-lexend text-4xl font-medium text-black dark:text-white">Daniel Cui</h1>
+        <h1
+          class="font-lexend text-3xl font-medium text-wrap text-black sm:text-4xl dark:text-white">
+          Daniel Cui
+        </h1>
       </div>
 
       <p>
@@ -177,6 +181,41 @@
         Tool to mute ads on Spotify through the computer's volume using the API and some simple
         audio manipulation with Python.
       </Project>
+    </Section>
+
+    <Section id="thoughts">
+      <Article title="The Metric System">
+        <p>celsius is better than fahrenheit</p>
+        <p>cooking using tbsp, tsp, cups, gallons, etc. is ridiculous</p>
+        <p>visualizing/converting is easier with distance / length / volume / weight</p>
+        <p>
+          caveat: weight in kg is not "weight"; it is mass; should use newtons (~x10 from kilograms)
+        </p>
+      </Article>
+
+      <Article title="Time Formatting">
+        <p>
+          24-hr time is better than 12 hours with am/pm. You still use the same number of digits
+          without an extra am/pm value. No confusion of 12 am vs 12 pm.
+        </p>
+        <p>
+          Date should follow numerical ordering, not speech order. either year-month-day or
+          day-month-year.
+        </p>
+      </Article>
+
+      <Article title="Football, Not Soccer.">
+        <p>this is kinda duh.</p>
+      </Article>
+
+      <Article title="snake_case > PascalCase > camelCase">
+        <p>
+          snake_case is simple: replace all spaces with underscores, and full caps for constants is
+          easy. It is also very readable. The other ones are less appealing. Filenames should
+          typicaly follow snake_case, and directories should use kebab-case (snake case with
+          hyphens).
+        </p>
+      </Article>
     </Section>
 
     <!-- <Section id="stories">

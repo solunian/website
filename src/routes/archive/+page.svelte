@@ -13,18 +13,18 @@
   <div
     class="flex max-w-5xl flex-col gap-4 px-6 pt-4 pb-8 sm:gap-8 sm:px-12 sm:pt-6 sm:pb-10 md:px-20 md:pt-10 md:pb-12">
     <header class="mt-8 flex max-w-2xl flex-col gap-4">
-      <div class="mb-4 flex flex-row flex-wrap items-center gap-4 sm:gap-6">
-        <img src="/website/icon_outline.png" alt="icon" class="h-12" />
+      <div class="mb-4 flex flex-row items-center gap-4 sm:gap-6">
+        <img src="/website/icon_outline.png" alt="icon" class="inline h-12" />
 
-        <h1 class="font-lexend text-4xl font-medium text-black dark:text-white">
+        <span class="font-lexend text-3xl font-medium text-black sm:text-4xl dark:text-white">
           Daniel's Archive
-        </h1>
+        </span>
       </div>
 
       <p>
         Some amateurish art. What is life without its meaningless, redundant whimsies? Just someone
-        who occasionally enjoys the imprecise yet ineffable quality of a physical or digital media,
-        whether it be pixels or vectors or carbon dust.
+        who very occasionally enjoys the imprecise yet ineffable quality of a physical or digital
+        media, whether it be pixels or vectors or carbon dust.
       </p>
 
       <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />

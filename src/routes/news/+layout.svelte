@@ -1,13 +1,9 @@
 <script lang="ts">
-  import type { Snippet } from "svelte";
+  import type { LayoutProps } from "./$types";
 
-  interface Props {
-    children?: Snippet;
-  }
-
-  let { children }: Props = $props();
+  let { children }: LayoutProps = $props();
 </script>
 
 <div class="flex min-h-screen flex-col font-serif text-black dark:text-zinc-300">
-  {@render children?.()}
+  {@render children()}
 </div>
