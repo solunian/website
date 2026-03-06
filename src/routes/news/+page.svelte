@@ -117,7 +117,7 @@
 </script>
 
 <svelte:head>
-  <title>Daniel's Hacker News</title>
+  <title>Daniel's Hacker News • solunian.dev</title>
 
   <meta name="description" content="An aesthetic wrapper for Y Combinator's Hacker News." />
 
@@ -223,7 +223,7 @@
             </svg>
           </button>
           <div class="absolute right-2 bottom-2 font-sans text-4xl text-red-700">failed.</div>
-          <img src="/website/polite_cat.avif" alt="polite cat" class="w-96 rounded-xl" />
+          <img src="/website/polite_cat.png" alt="polite cat" class="w-96 rounded-xl" />
         </div>
       </div>
     {/if}
@@ -231,6 +231,6 @@
 </div>
 
 <footer
-  class="flex flex-row justify-center border-2 border-zinc-300 bg-zinc-200 pt-2 pb-4 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
+  class="flex flex-row justify-center border-t-2 border-zinc-300 bg-zinc-200 pt-2 pb-4 font-mono text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-700">
   <About />
 </footer>

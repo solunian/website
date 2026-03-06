@@ -2,32 +2,7 @@
   import Link from "$lib/components/link.svelte";
   import Project from "$lib/components/project.svelte";
   import Section from "$lib/components/section.svelte";
-  import Gallery from "$lib/components/gallery.svelte";
-
-  const footer_texts = [
-    "being alive.",
-    "stay determined!",
-    "life is hard.",
-    "why, hello there!",
-    "can't we be kind.",
-    "hacking into the mainframe.",
-    "never gonna give you up.",
-    "winter is coming.",
-    "is love dead.",
-    "where are we?",
-    "what are we doing?",
-    "how can we live?",
-    "are we happy?",
-    "hello world.",
-    "did we love enough.",
-    "is this our maybe happy ending.",
-    "where to now.",
-    "defying entropy.",
-    "wait for me.",
-    "all things die.",
-    "how much can your heart take.",
-    "how could the world be?",
-  ];
+  import Footer from "$lib/components/footer.svelte";
 </script>
 
 <svelte:head>
@@ -50,36 +25,26 @@
       </p>
 
       <p>
-        I enjoy creating <Link href="#projects">[cool things]</Link> with code,
-        <Link href="#sketches">[sketching]</Link>, and making
-        <Link href="#pixel-art">[pixel art]</Link>. Feel free to check out my work below!
+        Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
+        or
+        <span class="text-[#5865F2]">@solunian</span> on Discord.
       </p>
 
       <hr class="rounded-full border-1 border-zinc-300 dark:border-zinc-700" />
 
-      <p>
-        Right now, I'm busy living my life. You can find most of my coding work on my <Link
-          href="https://github.com/solunian"><span class="text-green-600">GitHub</span></Link
-        >!
-      </p>
-
-      <!-- <p>
-        I'm planning to make <Link href="https://github.com/solunian/paperplane"
-          ><b class="font-medium">paperplane</b></Link
-        >, a text editor/format for creative writing, and
-        <Link href="https://github.com/solunian/tart"><b class="font-medium">tart</b></Link>, a
-        simple project management tool. More on my <Link href="https://github.com/solunian"
-          ><span class="text-green-600">GitHub</span></Link
-        >!
-      </p> -->
-
-      <p>
-        Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
-        or
-        <span
-          class="inline-block bg-linear-to-r/srgb from-[#FF0069] to-[#5865F2] bg-clip-text text-transparent"
-          >@solunian</span> on Instagram or Discord.
-      </p>
+      <div>
+        <Link href="#projects">[#projects]</Link>
+        <Link href="#thoughts">[#thoughts]</Link>
+        <Link href="/news">[/news]</Link>
+        <Link href="/archive">[/archive]</Link>
+        <Link href="https://github.com/solunian"
+          >[<span class="text-green-600">{">github"}</span>]</Link>
+        <Link href="https://instagram.com/solunian"
+          >[<span
+            class="bg-linear-to-r from-[#FFD600] via-[#FF0069] to-[#7638FA] bg-clip-text text-transparent"
+            >{">instagram"}</span
+          >]</Link>
+      </div>
     </header>
 
     <Section id="projects">
@@ -110,7 +75,7 @@
 
       <Project
         title="countdown"
-        link="https://countdowning.vercel.app/"
+        link="https://countdown.solunian.dev"
         github_link="https://github.com/solunian/countdown">
         A pretty clean and messily written countdown generator for deadlines and timers. Just a
         kinda half-baked project made over a weekend.
@@ -214,60 +179,6 @@
       </Project>
     </Section>
 
-    <Section id="sketches">
-      <Gallery
-        folder="sketches"
-        grayscale
-        filenames={[
-          "iris.jpg",
-          "vishnu.jpg",
-          "ishaan.jpg",
-          "angela.jpg",
-          "sunny.jpg",
-          "justin_avy.jpg",
-          "susan.jpg",
-          "rishi.jpg",
-          "annie.jpg",
-          "shine.jpg",
-          "lincoln_skull.jpg",
-          "orchids.jpg",
-          "daniels_hand.jpg",
-          "shreyan.jpg",
-          "sanias_bottle.jpg",
-          "rose.jpg",
-          "apple.jpg",
-          "tiffany.jpg",
-          "book_talk_big_three.jpg",
-          "arnav.jpg",
-          "alicia.jpg",
-          "avy.jpg",
-          "elaine.jpg",
-          "ajay.jpg",
-          "kitten.jpg",
-          "little_bird.jpg",
-          "owl.jpg",
-          "phoenix.jpg",
-          "christmas_hat_bird.jpg",
-          "porg.jpg",
-          "panda.jpg",
-          "tiger.jpg",
-          "wolf.jpg",
-          "seagull.jpg",
-        ]} />
-    </Section>
-
-    <Section id="pixel-art" name="pixel art">
-      <Gallery
-        folder="pixel-art"
-        filenames={[
-          "storke_tower.png",
-          "rick_astley.png",
-          "shine_pfp.png",
-          "worst_intersection.png",
-          "creekside.png",
-        ]} />
-    </Section>
-
     <!-- <Section id="stories">
       <p>
         Note: I had written several stories a while ago, but looking back now, they are definitely
@@ -277,7 +188,4 @@
   </div>
 </div>
 
-<footer
-  class="flex flex-row justify-center bg-zinc-50 pt-2 pb-4 font-mono text-zinc-300 dark:bg-zinc-950 dark:text-zinc-700">
-  {footer_texts[Math.floor(Math.random() * footer_texts.length)]}
-</footer>
+<Footer />
