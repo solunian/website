@@ -184,36 +184,84 @@
     </Section>
 
     <Section id="thoughts">
-      <Article title="The Metric System">
-        <p>celsius is better than fahrenheit</p>
-        <p>cooking using tbsp, tsp, cups, gallons, etc. is ridiculous</p>
-        <p>visualizing/converting is easier with distance / length / volume / weight</p>
+      <Article title="Use the Metric System">
         <p>
-          caveat: weight in kg is not "weight"; it is mass; should use newtons (~x10 from kilograms)
+          For Americans (such as myself), I understand the reluctance to use something unfamiliar in
+          every day life; however, there are too many good reasons to immerse yourself in the metric
+          system.
+        </p>
+
+        <p>
+          <b>Majority of the world uses it.</b> So it is good for international traveling, conversing
+          with people from outside the country, and keeping in touch with a more globally connected world.
+        </p>
+
+        <p>
+          <b>Cooking with precise measurements.</b> Using tbsp, tsp, cups, gallons, etc. is often time
+          consuming and leaves many measuring utensils dirty. Using a scale provides more accurate measurements
+          of weight (not volume) for whatever you need to cook.
+        </p>
+
+        <p>
+          <b>Conversion and visualization are easier</b> for distance/length (meter), volume (liter),
+          weight/mass (gram). With its consistent prefixes as powers of ten onto base units, conversions
+          can simply be done by moving the decimal point. Traveling one kilometer can be easily broken
+          down to 1000 meters, and one liter of water will weight one kilogram. There will be no need
+          to know 5280 feet to one mile, or the difference between fluid ounces and weight ounces, or
+          any other arbitrary, non-base-10 divisions for units of 3, 8, 12, 16, ... but no more! Metric
+          is literally the basis for all modern science standardizations because it is simple and consistent.
+        </p>
+
+        <p>
+          <b>celsius.</b> 0 is freezing point, 100 is boiling point for water. For all the fahrenheit
+          fanatics out there, I get that you *think* it's intuitive, but just strip away all the ingrained
+          emotion of familiarity. Why is 32 the freezing point and 212 the boiling point? Sure, you have
+          more precision with integer values but can people even tell the difference of one degree fahrenheit?
+          (also you can put a decimal point for celsius) If this is just an arbitrary measure to know
+          temperature, can't we gain an intuition for both?
+        </p>
+
+        <p>Now I bet you are so convinced to become unit fluent so here is what you can do:</p>
+        <ul class="list-disc pl-6">
+          <li>Convert weather/thermostat temperatures to celsius. (c * 1.8 + 32 = f)</li>
+          <li>Convert fitness tracking distance to kilometers. (1.6 * km = mi)</li>
+          <li>Get a cooking scale that uses grams.</li>
+          <li>Use kilograms for body weight and meters/cm for height.</li>
+        </ul>
+
+        <p>
+          And that's pretty much it! Gradually, you will be able to understand both systems easily;
+          e.g. I will understand when my friend says it is 68 degrees out while my phone tells me
+          20. To anyone who appreciates simplicity and well-defined standards, you should make this
+          switch.
         </p>
       </Article>
 
-      <Article title="Time Formatting">
+      <Article title="24-Hour Time and yyyy-mm-dd Date">
         <p>
-          24-hr time is better than 12 hours with am/pm. You still use the same number of digits
-          without an extra am/pm value. No confusion of 12 am vs 12 pm.
+          24-hour time is less confusing than 12 hours with am/pm for any kind of scheduling; the
+          hour number gives the exact hour of the day you are currently at. 1 pm actually means 13
+          hours of the day has passed. You still use the same number of digits, just simply without
+          an extra am/pm value. There would be no confusion of 12 am vs. 12 pm as it would be 00:00
+          and 12:00, which is a much more understandable difference.
         </p>
-        <p>
-          Date should follow numerical ordering, not speech order. either year-month-day or
-          day-month-year.
-        </p>
-      </Article>
 
-      <Article title="Football, Not Soccer.">
-        <p>this is kinda duh.</p>
+        <p>
+          Writing the date should follow numerical ordering, not speech order. I am preferring
+          year-month-day because the order can continue in a satisfying decreasing significance with
+          hour coming after day, minute after hour, and so on. (yyyy-mm-dd hh:mm:ss: ...) Also in
+          English, the mm-dd part can still be easily read in the spoken order like 01-13 being Jan
+          13th.
+        </p>
       </Article>
 
       <Article title="snake_case > PascalCase > camelCase">
         <p>
-          snake_case is simple: replace all spaces with underscores, and full caps for constants is
-          easy. It is also very readable. The other ones are less appealing. Filenames should
-          typicaly follow snake_case, and directories should use kebab-case (snake case with
-          hyphens).
+          snake_case is simple: replace all spaces with underscores, and FULL_CAPS for constants is
+          easy. It is also very readable. The other ones are less appealing as some file systems
+          differ in case-sensitivity and squishing words together can get messy. For urls and domain
+          names where underscores are discouraged or not allowed, you should use kebab-case (snake
+          case with hyphens).
         </p>
       </Article>
     </Section>
