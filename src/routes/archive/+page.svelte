@@ -23,7 +23,7 @@
 
       <p>
         Some amateurish art. What is life without its meaningless, redundant whimsies? Just someone
-        who very occasionally enjoys the imprecise yet ineffable quality of a physical or digital
+        who very occasionally enjoys the imprecise yet ineffable quality of physical or digital
         media, whether it be pixels or vectors or carbon dust.
       </p>
 
