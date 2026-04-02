@@ -53,6 +53,14 @@
 
     <Section id="projects">
       <Project
+        title="Poker Bot Tournament Backend"
+        github_link="https://github.com/solunian/poker-backend-server">
+        FastAPI backend server that handles code file uploads, table/game logic (bugged), and
+        passing data to run submitted code for poker games. For touranment where participants submit
+        code that plays poker.
+      </Project>
+
+      <Project
         title="two-colors"
         link="https://solunian.itch.io/two-colors"
         github_link="https://github.com/solunian/two-colors"
