@@ -42,7 +42,7 @@
   dates: dates-helper(start-date: "Feb 2025", end-date: "Jun 2026"),
 )
 - Architected the frontend for an *interactive digital yearbook* using SvelteKit and Tailwind CSS, implementing authentication, responsive interfaces, form validation, and application-wide error handling.
-- *Shipped the #link("https://yearbookpro.com")[beta] to three schools* and engineered data binding between the admin content management system and the end-user experience.
+- *Shipped the #link("https://yearbookpro.vercel.app/")[beta] to three schools* and engineered data binding between the admin content management system and the end-user experience.
 
 
 == Projects
