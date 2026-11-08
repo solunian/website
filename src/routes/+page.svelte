@@ -23,10 +23,7 @@
         </h1>
       </div>
 
-      <p>
-        Hi there! I'm a second year college student from the Bay Area, studying CS at UC Santa
-        Barbara.
-      </p>
+      <p>I'm a third year college student from the Bay Area, studying CS at UC Santa Barbara.</p>
 
       <p>
         Reach me at <Link href="mailto:solunian@gmail.com">solunian@gmail.com</Link>
