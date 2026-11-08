@@ -28,7 +28,7 @@
 #edu(
   institution: "University of California, Santa Barbara",
   location: "Santa Barbara, CA",
-  dates: dates-helper(start-date: "Sep 2024", end-date: "Jun 2028"),
+  dates: dates-helper(start-date: "Sep 2024", end-date: "Dec 2027"),
   degree: "B.S. Computer Science",
 )
 - Cumulative GPA: 3.97/4.0 | Dean's Honors
